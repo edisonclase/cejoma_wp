@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Politécnico Profesor José Mercedes Alvino (CEJOMA). Educación técnico-profesional en Santiago, República Dominicana.">
+  <meta name="author" content="Edison Clase">
+  <meta name="robots" content="index, follow">
+  <title>CEJOMA | Oferta Académica</title>
+  <link rel="icon" type="image/png" href="../img/logo_jma.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../oferta_academica/styles.css">
+</head>
+
+<body>
+  <div class="barra_principal">
+    <span><i class="fa-solid fa-envelope"></i> cejomal.2014@gmail.com</span>
+    <span><i class="fa-solid fa-phone"></i> (809) 570-6598</span>
+    <span><i class="fa-solid fa-location-dot"></i> Canabacoa, Puñal, Santiago R.D.</span>
+  </div>
+
+<header class="encabezado">
+  <div class="marca">
+    <a href="../index.html"> 
+      <img src="../img/Logo_cejoma.jpg" alt="Logo de Cejoma">
+    </a>
+    <div class="marca-texto">
+      <h1>Politécnico Profesor José Mercedes Alvino</h1>
+      <h2>CEJOMA</h2>
+      <p>Formando con amor seres justos y competentes.</p>
+    </div>
+  </div> 
+    <nav id="menu">
+      <a href="../index.html">Inicio</a>
+      <a href="../nosotros/index.html">Nosotros</a>
+      <a href="../oferta_academica/index.html">Oferta Académica</a>
+      <a href="../contacto/index.html">Contacto</a>
+      <a class="btn-admision" href="#">Admisión</a>
+    </nav>
+  <div class="menu-toggle" id="btnMenu">☰</div>
+</header>
+<section class="oferta_academica" id="clases">
+  <h2 class="of_aca_titulo animar_entrada">Oferta Académica</h2>
+
+  <div class="contenedor_ofertas">
+    
+    <a href="../programs/servicios_alojamiento/index.html" class="oferta_caja animar_entrada retraso-1">
+      <img class="img_clases" src="../img/servicio_alojamiento.jpg" alt="Servicios de Alojamiento">
+      <div class="capa_texto">
+        <h3>Servicios de Alojamiento</h3>
+        <span class="btn_falso">Ver Carrera <i class="fa-solid fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <a href="../programs/logistica_transporte/index.html" class="oferta_caja animar_entrada retraso-2">
+      <img class="img_clases" src="../img/logistica_transporte.jpg" alt="Logística y Transporte">
+      <div class="capa_texto">
+        <h3>Logística y Transporte</h3>
+        <span class="btn_falso">Ver Carrera <i class="fa-solid fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <a href="../programs/atencion_emergencia_salud/index.html" class="oferta_caja animar_entrada retraso-3">
+      <img class="img_clases" src="../img/atencion_emergencias.jpg" alt="Salud">
+      <div class="capa_texto">
+        <h3>Atención a Emergencias de Salud</h3>
+        <span class="btn_falso">Ver Carrera <i class="fa-solid fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<section id="contacto" class="contacto">
+    <h3>Nuestras Redes</h3>
+    <div class="redes">
+      <a href="https://www.facebook.com/profile.php?id=100009640831152" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/jose_mercedes_alvino/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="http://www.youtube.com/@politecnicoprofesorjosemer7603" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+</section>
+
+  <footer class="animar_entrada">
+    <p>© CEJOMA – Todos los derechos reservados</p>
+    <p>Diseñado por <span>Edison Clase</span></p>
+  </footer>
+    <script>
+    const btnMenu = document.getElementById('btnMenu');
+    const menu = document.getElementById('menu');
+
+    btnMenu.addEventListener('click', () => {
+    menu.classList.toggle('mostrar');
+    });
+  </script>
+</body>
+</html>

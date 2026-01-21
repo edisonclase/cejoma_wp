@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Politécnico Profesor José Mercedes Alvino (CEJOMA). Educación técnico-profesional en Santiago, República Dominicana.">
+  <meta name="author" content="Edison Clase">
+  <meta name="robots" content="index, follow">
+  <title>CEJOMA | Politécnico Profesor José Mercedes Alvino</title>
+  <link rel="icon" type="image/png" href="../img/logo_jma.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../tu_cejoma/styles.css">
+</head>
+
+<body>
+  <div class="barra_principal">
+    <span><i class="fa-solid fa-envelope"></i> cejomal.2014@gmail.com</span>
+    <span><i class="fa-solid fa-phone"></i> (809) 570-6598</span>
+    <span><i class="fa-solid fa-location-dot"></i> Canabacoa, Puñal, Santiago R.D.</span>
+  </div>
+  
+<header class="encabezado">
+  <div class="marca">
+    <a href="../index.html"> 
+      <img src="../img/Logo_cejoma.jpg" alt="Logo de Cejoma">
+    </a>
+    <div class="marca-texto">
+      <h1>Politécnico Profesor José Mercedes Alvino</h1>
+      <h2>CEJOMA</h2>
+      <p>Formando con amor seres justos y competentes.</p>
+    </div>
+  </div> 
+    <nav id="menu">
+      <a href="../index.html">Inicio</a>
+      <a href="../nosotros/index.html">Nosotros</a>
+      <a href="../oferta_academica/index.html">Oferta Académica</a>
+      <a href="../contacto/index.html">Contacto</a>
+      <a class="btn-admision" href="#">Admisión</a>
+    </nav>
+  <div class="menu-toggle" id="btnMenu">☰</div>
+</header>
+
+  <main>
+    <section class="login-container">
+      <form class="form_estudiantes">
+        <img src="../img/Logo_cejoma.jpg" alt="Logo Formulario" class="form_logo">
+        <h3>Acceso Estudiantes</h3>
+        
+        <div class="input-group">
+          <label for="student-id">ID o Matrícula</label>
+          <input type="text" id="student-id" class="form_est-input" placeholder="Ej: 2024-0001" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" class="form_est-input" placeholder="********" required>
+        </div>
+
+        <div class="form-footer">
+          <a href="/recuperar-password.html" class="link-olvido">¿Olvidaste tu contraseña?</a>
+        </div>
+        
+        <button type="submit" class="btn-enviar">Entrar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© CEJOMA – Todos los derechos reservados</p>
+    <p>Diseñado por <strong>Edison Clase</strong></p>
+  </footer>
+  <script>
+    const btnMenu = document.getElementById('btnMenu');
+    const menu = document.getElementById('menu');
+
+    btnMenu.addEventListener('click', () => {
+    menu.classList.toggle('mostrar');
+    });
+  </script>
+
+</body>
+
+</html>

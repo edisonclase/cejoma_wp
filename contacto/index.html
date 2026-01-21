@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Politécnico Profesor José Mercedes Alvino (CEJOMA). Educación técnico-profesional en Santiago, República Dominicana.">
+  <meta name="author" content="Edison Clase">
+  <meta name="robots" content="index, follow">
+  <title>CEJOMA | Politécnico Profesor José Mercedes Alvino</title>
+  <link rel="icon" type="image/png" href="../img/logo_jma.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../contacto/styles.css">
+</head>
+
+<body>
+  <div class="barra_principal">
+    <span><i class="fa-solid fa-envelope"></i> cejomal.2014@gmail.com</span>
+    <span><i class="fa-solid fa-phone"></i> (809) 570-6598</span>
+    <span><i class="fa-solid fa-location-dot"></i> Canabacoa, Puñal, Santiago R.D.</span>
+  </div>
+  
+<header class="encabezado">
+  <div class="marca">
+    <a href="../index.html"> 
+      <img src="../img/Logo_cejoma.jpg" alt="Logo de Cejoma">
+    </a>
+    <div class="marca-texto">
+      <h1>Politécnico Profesor José Mercedes Alvino</h1>
+      <h2>CEJOMA</h2>
+      <p>Formando con amor seres justos y competentes.</p>
+    </div>
+  </div> 
+    <nav id="menu">
+      <a href="../index.html">Inicio</a>
+      <a href="../nosotros/index.html">Nosotros</a>
+      <a href="../oferta_academica/index.html">Oferta Académica</a>
+      <a href="../contacto/index.html">Contacto</a>
+      <a class="btn-admision" href="#">Admisión</a>
+    </nav>
+  <div class="menu-toggle" id="btnMenu">☰</div>
+</header>
+
+<main class="contacto_pagina animar_entrada">
+  <div class="contacto_contenedor">
+    
+    <div class="info_contacto">
+      <h2 class="titulo_lateral">Ponte en contacto:</h2>
+      <p class="subtitulo_contacto">Estamos para servirte. Utiliza cualquiera de nuestros canales oficiales.</p>
+
+      <div class="metodos_contacto">
+        <div class="item_contacto">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <span>Teléfono</span>
+            <p>(809) 570-6598</p>
+          </div>
+        </div>
+
+        <div class="item_contacto">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <span>Correo Electrónico</span>
+            <p>cejomal.2014@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="item_contacto">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <span>Ubicación</span>
+            <p>Canabacoa, Puñal, Santiago, R.D.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="redes_contacto">
+        <h3 style="color: var(--verde-oscuro); margin-bottom: 20px;">Nuestras Redes Oficiales:</h3>
+        <div class="redes"> <a href="https://www.facebook.com/profile.php?id=100009640831152" target="_blank" title="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/jose_mercedes_alvino/" target="_blank" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="http://www.youtube.com/@politecnicoprofesorjosemer7603" target="_blank" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mapa_contenedor">
+      <div class="caja_mapa_relieve">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.5623456789!2d-70.645678!3d19.412345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDI0JzQ0LjQiTiA3MMKwMzgnNDQuNCJX!5e0!3m2!1ses!2sdo!4v1625500000000" 
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+        <div class="boton_mapa">
+          <a href="https://maps.google.com" target="_blank">
+            <i class="fa-solid fa-map-location-dot"></i> Abrir en Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+  <footer>
+    <p>© CEJOMA – Todos los derechos reservados</p>
+    <p>Diseñado por <span>Edison Clase</span></p>
+  </footer>
+    <script>
+    const btnMenu = document.getElementById('btnMenu');
+    const menu = document.getElementById('menu');
+
+    btnMenu.addEventListener('click', () => {
+    menu.classList.toggle('mostrar');
+    });
+  </script>
+
+</body>
+
+</html>

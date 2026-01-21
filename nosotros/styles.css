@@ -1,0 +1,168 @@
+/* MENÚ DE ACCESOS RÁPIDOS */
+.accesos_rapidos {
+    background: var(--gris-suave);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.accesos_rapidos a {
+    text-decoration: none;
+    background: var(--verde-claro);
+    color: var(--verde-oscuro);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    border: 1px solid var(--verde-base);
+}
+
+.accesos_rapidos a:hover {
+    background: var(--verde-base);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   SECCIÓN: NOSOTROS / BIO (Relieve Unificado)
+   ========================================= */
+.nosotros_seccion {
+  padding: 40px 20px 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.filo_contenedor { max-width: 950px; width: 100%; }
+
+.filo_caja_relieve {
+  background: var(--blanco);
+  padding: 60px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.4s ease;
+}
+
+.filo_caja_relieve:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(31, 143, 74, 0.12);
+}
+
+.logo_institucion_grande {
+  width: 180px;
+  display: block;
+  margin: 0 auto 50px auto;
+}
+
+/* ESTILOS DE LA BIO */
+.bio_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.foto_biografia {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%; /* Borde Redondo */
+    border: 6px solid var(--verde-base); /* Borde Verde Institucional */
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.bloque_texto h3 {
+  color: var(--verde-oscuro);
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  border-left: 5px solid var(--dorado);
+  padding-left: 20px;
+}
+
+.bloque_texto p {
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Lista de Valores */
+.lista_valores {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.lista_valores li {
+  font-weight: 600;
+  color: var(--verde-base);
+  display: flex;
+  align-items: center;
+}
+
+.lista_valores li::before {
+  content: "✔";
+  margin-right: 12px;
+  color: var(--dorado);
+}
+
+/* --- CONTACTO --- */
+.contacto { padding: 60px 5%; text-align: center; }
+.redes { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.redes a {
+  width: 60px; height: 60px;
+  background: white;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; color: var(--verde-base);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.redes a:hover { background: var(--dorado); color: white; transform: translateY(-5px); }
+
+
+@media (max-width: 600px) {
+  .accesos_rapidos {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .accesos_rapidos a {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .filo_caja_relieve {
+    padding: 25px;
+  }
+
+  .logo_institucion_grande {
+    width: 120px;
+    margin-bottom: 30px;
+  }
+
+  .bloque_texto h3 {
+    font-size: 1.3rem;
+    padding-left: 12px;
+  }
+
+  .bloque_texto p {
+    font-size: 0.95rem;
+  }
+
+  .lista_valores {
+    grid-template-columns: 1fr; /* una sola columna en móvil */
+  }
+
+}
+

@@ -1,0 +1,138 @@
+/* =========================================
+   SECCIÓN: OFERTA ACADÉMICA (Limpio y Moderno)
+   ========================================= */
+.oferta_academica {
+  padding: 60px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.of_aca_titulo {
+  font-size: 2.5rem;
+  color: var(--verde-oscuro);
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.of_aca_titulo::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: var(--dorado);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contenedor_ofertas {
+  display: grid;
+  /* Responsivo automático: columnas de min 300px hasta 1fr */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.oferta_caja {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: block; /* Para que el enlace ocupe toda la caja */
+  text-decoration: none;
+  /* Relieve inicial */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--oscuro);
+}
+
+/* Efecto de elevación al pasar el mouse */
+.oferta_caja:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.img_clases {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.oferta_caja:hover .img_clases {
+  transform: scale(1.1); /* Zoom suave a la imagen */
+}
+
+/* Capa de texto y gradiente (SIEMPRE VISIBLE) */
+.capa_texto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%; /* Gradiente que cubre más de la mitad */
+  background: linear-gradient(to top, rgba(11, 61, 36, 0.95) 10%, transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  text-align: left;
+  z-index: 2;
+}
+
+.capa_texto h3 {
+  color: var(--blanco);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.btn_falso {
+  color: var(--dorado);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.3s;
+}
+
+/* --- CONTACTO --- */
+.contacto { padding: 60px 5%; text-align: center; }
+.redes { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.redes a {
+  width: 60px; height: 60px;
+  background: white;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; color: var(--verde-base);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.redes a:hover { background: var(--dorado); color: white; transform: translateY(-5px); }
+
+.oferta_caja:hover .btn_falso {
+  gap: 15px; /* La flechita se mueve al hacer hover */
+}
+
+/* Ajustes para Tablets y Laptops pequeñas */
+@media (max-width: 1024px) {
+  .oferta_caja {
+    height: 350px;
+  }
+}
+
+/* Ajustes para Móviles */
+@media (max-width: 480px) {
+  .of_aca_titulo {
+    font-size: 1.8rem;
+  }
+  .oferta_caja {
+    height: 320px;
+  }
+}

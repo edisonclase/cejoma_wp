@@ -1,0 +1,123 @@
+/* =========================================
+   ESTILOS ESPECÍFICOS DEL LOGIN (MAIN)
+   ========================================= */
+
+main {
+    min-height: calc(100vh - 250px); /* Asegura que el footer no suba demasiado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.login-container {
+    background: var(--blanco);
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--verde-base); /* Detalle institucional */
+}
+
+.form_estudiantes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_logo {
+    height: 90px;
+    margin-bottom: 15px;
+}
+
+.form_estudiantes h3 {
+    color: var(--verde-oscuro);
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* GRUPOS DE ENTRADA */
+.input-group {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--verde-oscuro);
+    margin-bottom: 8px;
+}
+
+.form_est-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.form_est-input:focus {
+    outline: none;
+    border-color: var(--verde-base);
+    box-shadow: 0 0 8px rgba(31, 143, 74, 0.2);
+}
+
+/* OLVIDO SU CONTRASEÑA */
+.form-footer {
+    width: 100%;
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 25px;
+}
+
+.link-olvido {
+    font-size: 0.85rem;
+    color: #666;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.link-olvido:hover {
+    color: var(--verde-base);
+    text-decoration: underline;
+}
+
+/* BOTÓN DE ENTRADA */
+.btn-enviar {
+    width: 100%;
+    padding: 14px;
+    background: var(--verde-base);
+    color: var(--blanco);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-enviar:hover {
+    background: var(--verde-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 20px;
+    }
+    
+    .marca-texto h1 {
+        font-size: 1.2rem;
+    }
+}
