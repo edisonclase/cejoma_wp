@@ -1,141 +1,369 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portal de Acceso Estudiantil y Administrativo del Politécnico Prof. José Mercedes Alvino (Tu CEJOMA)">
-  <title>Politécnico Prof. José Mercedes Alvino | Tu CEJOMA</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../img/logo_cejoma.png">
-  <link rel="apple-touch-icon" href="../img/logo_cejoma.png">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <link rel="stylesheet" href="../home/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  
-  <style>
-    .login-container {
-      background: var(--blanco, #ffffff);
-      max-width: 420px;
-      margin: 50px auto;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      border-top: 5px solid var(--verde-base, #1f8f4a);
-    }
-    .form-group {
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-    }
-    .form-group label {
-      font-weight: 600;
-      color: var(--verde-oscuro, #0B3D24);
-      margin-bottom: 8px;
-    }
-    .form-group input {
-      padding: 12px;
-      border: 1px solid #CCC;
-      border-radius: 8px;
-      font-size: 1rem;
-      outline: none;
-      transition: border-color 0.3s ease;
-    }
-    .form-group input:focus {
-      border-color: var(--verde-base, #1f8f4a);
-      box-shadow: 0 0 0 3px rgba(31, 143, 74, 0.15);
-    }
-    .btn-submit {
-      background: var(--verde-oscuro, #0B3D24);
-      color: var(--blanco, #ffffff);
-      border: none;
-      padding: 12px;
-      width: 100%;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s ease;
-    }
-    .btn-submit:hover {
-      background: var(--verde-base, #1f8f4a);
-    }
-  </style>
+  <meta
+    name="description"
+    content="Acceso a servicios digitales del Politécnico Prof. José Mercedes Alvino (CEJOMA)."
+  >
+
+  <title>Tu CEJOMA | Politécnico Prof. José Mercedes Alvino</title>
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="../img/cejoma_logo.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="../img/cejoma_logo.png"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/global.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
 </head>
+
 <body>
 
-  <a href="#formulario-login" class="skip-link">Saltar al formulario de acceso</a>
+  <!-- Accesibilidad -->
 
-  <!-- ENCABEZADO -->
-  <header class="encabezado" role="banner">
-    <a href="../index.html" class="marca" aria-label="Inicio - Politécnico Prof. José Mercedes Alvino">
-      <!-- RUTA DEL LOGO CORREGIDA -->
-      <img src="../img/logo_cejoma.png" alt="Logotipo Politécnico Prof. José Mercedes Alvino">
+  <a
+    href="#contenido-principal"
+    class="skip-link"
+  >
+    Saltar al contenido principal
+  </a>
+
+
+  <!-- =========================================
+       BARRA SUPERIOR
+  ========================================== -->
+
+  <div class="barra_principal">
+
+    <span>
+      <i class="fas fa-phone-alt"></i>
+      (809) 570-6598
+    </span>
+
+    <span>
+      <i class="fas fa-envelope"></i>
+      cejomal2014@gmail.com
+    </span>
+
+    <span>
+      <i class="fas fa-map-marker-alt"></i>
+      Santiago, República Dominicana
+    </span>
+
+  </div>
+
+
+  <!-- =========================================
+       ENCABEZADO
+  ========================================== -->
+
+  <header
+    class="encabezado"
+    role="banner"
+  >
+
+    <a
+      href="../index.html"
+      class="marca"
+      aria-label="Inicio - Politécnico Prof. José Mercedes Alvino"
+    >
+
+      <img
+        src="../img/cejoma_logo.png"
+        alt="Logotipo del Politécnico Prof. José Mercedes Alvino"
+      >
+
       <div class="marca-texto">
-        <h1>Politécnico Prof. José Mercedes Alvino</h1>
-        <h2>Formando con Amor Seres Justos y Competentes.</h2>
+
+        <h1>
+          Politécnico Prof. José Mercedes Alvino
+        </h1>
+
+        <h2>
+          Formando con Amor Seres Justos y Competentes.
+        </h2>
+
       </div>
+
     </a>
 
-    <button class="menu-toggle" id="btn-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-principal">
-      <i class="fas fa-bars" aria-hidden="true"></i>
+
+    <button
+      class="menu-toggle"
+      id="btn-menu"
+      aria-label="Abrir menú de navegación"
+      aria-expanded="false"
+      aria-controls="nav-principal"
+    >
+
+      <i
+        class="fas fa-bars"
+        aria-hidden="true"
+      ></i>
+
     </button>
 
-    <nav id="nav-principal" role="navigation" aria-label="Navegación principal">
-      <a href="../index.html">Inicio</a>
-      <a href="../nosotros/index.html">Nosotros</a>
-      <a href="../oferta_academica/index.html">Oferta Académica</a>
-      <a href="../contacto/index.html">Contacto</a>
-      <a href="index.html" class="btn-admision" aria-current="page">Tu CEJOMA</a>
+
+    <nav
+      id="nav-principal"
+      role="navigation"
+      aria-label="Navegación principal"
+    >
+
+      <a href="../index.html">
+        Inicio
+      </a>
+
+      <a href="../nosotros/index.html">
+        Nosotros
+      </a>
+
+      <a href="../oferta_academica/index.html">
+        Oferta Académica
+      </a>
+
+      <a href="../contacto/index.html">
+        Contacto
+      </a>
+
+
+      <div
+        class="nav-redes"
+        aria-label="Redes sociales de CEJOMA"
+      >
+
+        <a
+          href="https://www.facebook.com/profile.php?id=100009640831152"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook de CEJOMA"
+          title="Facebook de CEJOMA"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/jose_mercedes_alvino/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram de CEJOMA"
+          title="Instagram de CEJOMA"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@politecnicoprofesorjosemer7603"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Canal de YouTube de CEJOMA"
+          title="YouTube de CEJOMA"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
     </nav>
+
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <main id="contenido-principal" style="padding: 20px 5%;">
-    <div class="login-container">
-      <h2 style="color: var(--verde-oscuro, #0B3D24); text-align: center; margin-bottom: 10px;">Portal Tu CEJOMA</h2>
-      <p style="text-align: center; color: #666; font-size: 0.9rem; margin-bottom: 25px;">
-        Acceso a calificaciones, matriculación y registros académicos.
+
+  <!-- =========================================
+       CONTENIDO PRINCIPAL
+  ========================================== -->
+
+  <main
+    id="contenido-principal"
+    class="tu-cejoma-pagina"
+  >
+
+    <section class="tu-cejoma-hero">
+
+      <div class="tu-cejoma-icono">
+
+        <i class="fa-solid fa-user-graduate"></i>
+
+      </div>
+
+
+      <span class="tu-cejoma-etiqueta">
+        Servicios Digitales
+      </span>
+
+
+      <h2>
+        Tu CEJOMA
+      </h2>
+
+
+      <p>
+        Este espacio está destinado a los servicios digitales
+        de la comunidad educativa del Politécnico Prof. José
+        Mercedes Alvino.
       </p>
 
-      <form id="formulario-login" action="#" method="POST" aria-label="Formulario de inicio de sesión">
-        <div class="form-group">
-          <label for="matricula">Matrícula o Usuario:</label>
-          <input 
-            type="text" 
-            id="matricula" 
-            name="matricula" 
-            required 
-            aria-required="true"
-            autocomplete="username"
-            placeholder="Ej. 2024-0012">
+
+      <div class="tu-cejoma-aviso">
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        <div>
+
+          <strong>
+            Plataforma en preparación
+          </strong>
+
+          <p>
+            El acceso a los servicios de Tu CEJOMA será habilitado
+            próximamente. Mientras tanto, puedes utilizar las demás
+            secciones de nuestro portal institucional.
+          </p>
+
         </div>
 
-        <div class="form-group">
-          <label for="password">Contraseña:</label>
-          <input 
-            type="password" 
-            id="password" 
-            name="password" 
-            required 
-            aria-required="true"
-            autocomplete="current-password"
-            placeholder="••••••••">
-        </div>
+      </div>
 
-        <button type="submit" class="btn-submit">
-          <i class="fa-solid fa-right-to-bracket me-2"></i> Ingresar al Portal
-        </button>
-      </form>
-    </div>
+
+      <a
+        href="../index.html"
+        class="btn-volver-inicio"
+      >
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Volver al inicio
+
+      </a>
+
+    </section>
+
   </main>
 
-  <!-- PIE DE PÁGINA -->
-  <footer role="contentinfo">
-    <p>© 2026 <span>Politécnico Prof. José Mercedes Alvino</span>. Todos los derechos reservados.</p>
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer
+    role="contentinfo"
+    class="footer-cejoma"
+  >
+
+    <div class="footer-contenedor">
+
+      <div class="footer-identidad">
+
+        <img
+          src="../img/cejoma_logo.png"
+          alt="Logo CEJOMA"
+          class="footer-logo"
+        >
+
+        <div>
+
+          <h3>
+            CEJOMA
+          </h3>
+
+          <p>
+            Politécnico Prof. José Mercedes Alvino
+          </p>
+
+          <small>
+            Formando con Amor Seres Justos y Competentes.
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-redes">
+
+        <h4>
+          Síguenos
+        </h4>
+
+
+        <div class="footer-redes-iconos">
+
+          <a
+            href="https://www.facebook.com/profile.php?id=100009640831152"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook de CEJOMA"
+            title="Facebook de CEJOMA"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a
+            href="https://www.instagram.com/jose_mercedes_alvino/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de CEJOMA"
+            title="Instagram de CEJOMA"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://www.youtube.com/@politecnicoprofesorjosemer7603"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Canal de YouTube de CEJOMA"
+            title="YouTube de CEJOMA"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-divider"></div>
+
+
+    <p class="footer-copyright">
+      © 2026 <span>Politécnico Prof. José Mercedes Alvino (CEJOMA)</span>.
+      Todos los derechos reservados.
+    </p>
+
   </footer>
+
 
   <script src="../home/main.js"></script>
 
 </body>
+
 </html>
