@@ -1,168 +1,716 @@
-/* MENÚ DE ACCESOS RÁPIDOS */
+/* =====================================================
+   CEJOMA
+   SECCIÓN NOSOTROS
+===================================================== */
+
+
+/* =========================================
+   ACCESOS RÁPIDOS
+========================================= */
+
 .accesos_rapidos {
     background: var(--gris-suave);
+
     display: flex;
+
     justify-content: center;
-    gap: 20px;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
     padding: 20px;
+
     margin-top: 20px;
 }
 
+
 .accesos_rapidos a {
     text-decoration: none;
+
     background: var(--verde-claro);
+
     color: var(--verde-oscuro);
+
     padding: 10px 20px;
+
     border-radius: 50px;
+
     font-weight: 600;
+
     font-size: 0.9rem;
-    transition: 0.3s;
+
     border: 1px solid var(--verde-base);
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
+
+.accesos_rapidos a i {
+    margin-right: 6px;
+}
+
 
 .accesos_rapidos a:hover {
     background: var(--verde-base);
-    color: white;
+
+    color: var(--blanco);
+
     transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 15px rgba(31, 143, 74, 0.18);
 }
+
 
 /* =========================================
-   SECCIÓN: NOSOTROS / BIO (Relieve Unificado)
-   ========================================= */
+   SECCIÓN NOSOTROS
+========================================= */
+
 .nosotros_seccion {
-  padding: 40px 20px 80px 20px;
-  display: flex;
-  justify-content: center;
+    padding: 40px 20px 80px;
+
+    display: flex;
+
+    justify-content: center;
 }
 
-.filo_contenedor { max-width: 950px; width: 100%; }
+
+.filo_contenedor {
+    max-width: 950px;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   TARJETA PRINCIPAL
+========================================= */
 
 .filo_caja_relieve {
-  background: var(--blanco);
-  padding: 60px;
-  border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-  border: 1px solid rgba(0,0,0,0.04);
-  transition: all 0.4s ease;
+    background: var(--blanco);
+
+    padding: 60px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.08);
+
+    border:
+        1px solid rgba(0, 0, 0, 0.04);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
 }
+
 
 .filo_caja_relieve:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 30px 60px rgba(31, 143, 74, 0.12);
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 30px 60px rgba(31, 143, 74, 0.12);
 }
+
+
+/* =========================================
+   LOGO INSTITUCIONAL
+========================================= */
 
 .logo_institucion_grande {
-  width: 180px;
-  display: block;
-  margin: 0 auto 50px auto;
+    width: 180px;
+
+    max-width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    margin:
+        0 auto 50px;
 }
 
-/* ESTILOS DE LA BIO */
+
+/* =========================================
+   BLOQUES DE TEXTO
+========================================= */
+
+.bloque_texto h3 {
+    color: var(--verde-oscuro);
+
+    font-size: 1.6rem;
+
+    margin-bottom: 15px;
+
+    border-left:
+        5px solid var(--dorado);
+
+    padding-left: 20px;
+}
+
+
+.bloque_texto p {
+    color: #444;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    text-align: justify;
+
+    margin-bottom: 20px;
+}
+
+
+.bloque-separado {
+    margin-top: 40px;
+}
+
+
+.titulo-secundario {
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   FRASE DE FILOSOFÍA
+========================================= */
+
+.frase-filosofia {
+    margin:
+        10px 0 20px;
+
+    padding:
+        18px 22px;
+
+    background:
+        var(--gris-suave);
+
+    border-left:
+        4px solid var(--verde-base);
+
+    border-radius: 10px;
+
+    color:
+        var(--verde-oscuro);
+
+    font-style: italic;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   LISTA DE VALORES
+========================================= */
+
+.lista_valores {
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    padding: 0;
+
+    margin-top: 20px;
+}
+
+
+.lista_valores li {
+    background:
+        var(--verde-claro);
+
+    color:
+        var(--verde-oscuro);
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 52px;
+
+    padding:
+        12px 18px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    border:
+        1px solid rgba(31, 143, 74, 0.16);
+}
+
+
+.lista_valores li::before {
+    content: "✔";
+
+    margin-right: 12px;
+
+    color: var(--verde-base);
+
+    font-weight: 800;
+}
+
+
+/* =========================================
+   BIOGRAFÍA
+========================================= */
+
+.biografia-seccion {
+    margin-top: 50px;
+
+    border-top:
+        2px dashed #eeeeee;
+
+    padding-top: 40px;
+}
+
+
 .bio_header {
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     text-align: center;
+
     margin-bottom: 30px;
 }
+
 
 .foto_biografia {
     width: 220px;
+
     height: 220px;
+
     object-fit: cover;
-    border-radius: 50%; /* Borde Redondo */
-    border: 6px solid var(--verde-base); /* Borde Verde Institucional */
+
+    border-radius: 50%;
+
+    border:
+        6px solid var(--verde-base);
+
     margin-bottom: 25px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.bloque_texto h3 {
-  color: var(--verde-oscuro);
-  font-size: 1.6rem;
-  margin-bottom: 15px;
-  border-left: 5px solid var(--dorado);
-  padding-left: 20px;
+
+.bloque_texto .titulo-biografia {
+    border: none;
+
+    padding: 0;
+
+    margin:
+        0 0 5px;
+
+    text-align: center;
 }
 
-.bloque_texto p {
-  color: #444;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  text-align: justify;
-  margin-bottom: 20px;
+
+.subtitulo-biografia {
+    color: #666666;
+
+    font-weight: 600;
+
+    font-size: 0.9rem;
 }
 
-/* Lista de Valores */
-.lista_valores {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+
+/* =========================================
+   DATOS INSTITUCIONALES
+========================================= */
+
+.datos-institucionales {
+    margin-top: 40px;
+
+    padding: 20px;
+
+    background:
+        var(--verde-claro);
+
+    border-radius: 12px;
+
+    color:
+        var(--verde-oscuro);
+
+    text-align: center;
+
+    font-size: 0.9rem;
+
+    border:
+        1px solid rgba(31, 143, 74, 0.15);
 }
 
-.lista_valores li {
-  font-weight: 600;
-  color: var(--verde-base);
-  display: flex;
-  align-items: center;
+
+.datos-institucionales p {
+    margin: 0;
 }
 
-.lista_valores li::before {
-  content: "✔";
-  margin-right: 12px;
-  color: var(--dorado);
+
+.datos-institucionales i {
+    color: var(--verde-base);
+
+    margin-right: 5px;
 }
 
-/* --- CONTACTO --- */
-.contacto { padding: 60px 5%; text-align: center; }
-.redes { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-.redes a {
-  width: 60px; height: 60px;
-  background: white;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.5rem; color: var(--verde-base);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-.redes a:hover { background: var(--dorado); color: white; transform: translateY(-5px); }
 
+.datos-principales {
+    font-weight: 700;
+}
+
+
+.datos-contacto {
+    margin-top: 7px !important;
+}
+
+
+.datos-contacto a {
+    color: inherit;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.datos-contacto a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer-cejoma {
+    background:
+        linear-gradient(
+            135deg,
+            #081d12 0%,
+            var(--verde-oscuro) 100%
+        );
+
+    color: var(--blanco);
+
+    padding:
+        42px 5% 22px;
+
+    margin-top: 0;
+}
+
+
+.footer-contenedor {
+    max-width: 1140px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 35px;
+}
+
+
+.footer-identidad {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    text-align: left;
+}
+
+
+.footer-logo {
+    width: 72px;
+
+    height: 72px;
+
+    object-fit: contain;
+
+    background: var(--blanco);
+
+    border-radius: 50%;
+
+    padding: 5px;
+}
+
+
+.footer-identidad h3 {
+    margin:
+        0 0 2px;
+
+    color:
+        var(--dorado);
+
+    font-size:
+        1.3rem;
+
+    font-weight: 800;
+}
+
+
+.footer-identidad p {
+    margin: 0;
+
+    font-weight: 600;
+
+    color: var(--blanco);
+}
+
+
+.footer-identidad small {
+    color:
+        rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================
+   REDES DEL FOOTER
+========================================= */
+
+.footer-redes {
+    text-align: right;
+}
+
+
+.footer-redes h4 {
+    font-size: 0.9rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    margin-bottom: 12px;
+
+    color: var(--dorado);
+}
+
+
+.footer-redes-iconos {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+}
+
+
+.footer-redes-iconos a {
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color:
+        var(--blanco);
+
+    text-decoration: none;
+
+    font-size: 1.15rem;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.footer-redes-iconos a:hover {
+    background-color:
+        var(--dorado);
+
+    border-color:
+        var(--dorado);
+
+    color:
+        var(--verde-oscuro);
+
+    transform:
+        translateY(-3px);
+}
+
+
+.footer-divider {
+    max-width: 1140px;
+
+    height: 1px;
+
+    margin:
+        30px auto 20px;
+
+    background:
+        rgba(255, 255, 255, 0.13);
+}
+
+
+.footer-copyright {
+    text-align: center;
+
+    margin: 0;
+
+    font-size: 0.85rem;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+}
+
+
+.footer-copyright span {
+    color:
+        var(--dorado);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .nosotros_seccion {
+        padding:
+            30px 15px 60px;
+    }
+
+
+    .filo_caja_relieve {
+        padding: 35px;
+    }
+
+
+    .footer-contenedor {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .footer-identidad {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .footer-redes {
+        text-align: center;
+    }
+
+
+    .footer-redes-iconos {
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================
+   MÓVILES
+========================================= */
 
 @media (max-width: 600px) {
-  .accesos_rapidos {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
 
-  .accesos_rapidos a {
-    font-size: 0.8rem;
-    padding: 8px 14px;
-  }
+    .accesos_rapidos {
+        gap: 10px;
+
+        padding:
+            15px 10px;
+    }
+
+
+    .accesos_rapidos a {
+        font-size: 0.8rem;
+
+        padding:
+            8px 14px;
+    }
+
+
+    .filo_caja_relieve {
+        padding:
+            25px 20px;
+
+        border-radius: 15px;
+    }
+
+
+    .logo_institucion_grande {
+        width: 120px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .bloque_texto h3 {
+        font-size: 1.3rem;
+
+        padding-left: 12px;
+    }
+
+
+    .bloque_texto p {
+        font-size: 0.95rem;
+
+        text-align: left;
+    }
+
+
+    .lista_valores {
+        grid-template-columns: 1fr;
+    }
+
+
+    .foto_biografia {
+        width: 180px;
+
+        height: 180px;
+    }
+
+
+    .datos-institucionales {
+        font-size: 0.82rem;
+
+        padding: 18px 15px;
+    }
+
+
+    .footer-logo {
+        width: 64px;
+
+        height: 64px;
+    }
+
 }
-
-@media (max-width: 600px) {
-
-  .filo_caja_relieve {
-    padding: 25px;
-  }
-
-  .logo_institucion_grande {
-    width: 120px;
-    margin-bottom: 30px;
-  }
-
-  .bloque_texto h3 {
-    font-size: 1.3rem;
-    padding-left: 12px;
-  }
-
-  .bloque_texto p {
-    font-size: 0.95rem;
-  }
-
-  .lista_valores {
-    grid-template-columns: 1fr; /* una sola columna en móvil */
-  }
-
-}
-

@@ -1,179 +1,540 @@
 /* =========================================
-   ESTILOS GLOBALES (HEADER Y FOOTER)
-   ========================================= */
+   VARIABLES GLOBALES Y TEMA
+========================================= */
+
 :root {
-  --verde-base: #1f8f4a;
-  --verde-oscuro: #0b3d24;
-  --verde-claro: #e6f4ed;
-  --dorado: #f4c95d;
-  --blanco: #ffffff;
-  --oscuro: #0e1b14;
-  --texto: #1e1e1e;
-  --gris-suave: #f5f7f8;
+    --verde-oscuro: #0B3D24;
+    --verde-base: #1F8F4A;
+    --verde-claro: #E8F5E9;
+    --dorado: #F4C95D;
+    --blanco: #FFFFFF;
+    --gris-suave: #F4F6F8;
+    --texto: #222222;
+    --oscuro: #121212;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--gris-suave);
-  color: var(--texto);
-  line-height: 1.6;
-  overflow-x: hidden; /* Evita scroll horizontal */
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    background-color: var(--gris-suave);
+    color: var(--texto);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* BARRA SUPERIOR */
-.barra_principal {
-  background: var(--verde-oscuro);
-  color: var(--blanco);
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  padding: 8px 20px;
-  font-size: 0.8rem;
+
+/* =========================================
+   ACCESIBILIDAD (WCAG 2.1 AA)
+========================================= */
+
+
+/* Enlace de salto para lectores de pantalla */
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+
+    padding: 12px 20px;
+
+    z-index: 10000;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 0 0 8px 8px;
+
+    transition: top 0.2s ease-in-out;
 }
+
+
+.skip-link:focus {
+    top: 0;
+}
+
+
+/* Indicador de foco para navegación por teclado */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--dorado) !important;
+    outline-offset: 4px !important;
+}
+
+
+/* Ocultar visualmente manteniendo accesibilidad */
+
+.sr-only {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+
+    border: 0;
+}
+
+
+/* =========================================
+   BARRA SUPERIOR
+========================================= */
+
+.barra_principal {
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 24px;
+
+    padding: 8px 5%;
+
+    font-size: 0.85rem;
+}
+
 
 .barra_principal span {
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
+    display: flex;
+    align-items: center;
 }
+
 
 .barra_principal i {
-  color: var(--dorado);
-  margin-right: 6px;
+    color: var(--dorado);
+    margin-right: 8px;
 }
 
-/* ENCABEZADO */
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
 .encabezado {
-  background: var(--blanco);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 5%;
-  box-shadow: 0 6px 20px rgba(0,0,0,.08);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  height: 90px;
+    background: var(--blanco);
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 5%;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    min-height: 90px;
 }
+
+
+/* =========================================
+   MARCA INSTITUCIONAL
+========================================= */
 
 .marca {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  text-decoration: none;
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    text-decoration: none;
+
+    min-width: 0;
 }
+
 
 .marca img {
-  height: 70px;
-  width: auto;
+    height: 65px;
+    width: auto;
 }
+
 
 .marca-texto h1 {
-  font-size: 1.2rem;
-  color: var(--verde-oscuro);
-  line-height: 1.1;
-  font-weight: 700;
+    font-size: 1.2rem;
+
+    color: var(--verde-oscuro);
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    margin-bottom: 4px;
 }
+
 
 .marca-texto h2 {
-  font-size: 0.9rem;
-  color: var(--verde-base);
+    font-size: 0.85rem;
+
+    color: var(--verde-base);
+
+    line-height: 1.3;
+
+    margin: 0;
 }
 
-.marca-texto p {
-  font-size: 0.75rem;
-  color: #555;
-  font-style: italic;
-}
 
-/* NAVEGACIÓN ESCRITORIO */
+/* =========================================
+   NAVEGACIÓN PRINCIPAL
+========================================= */
+
 nav {
-  display: flex;
-  align-items: center;
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
 }
 
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: var(--verde-oscuro);
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: 0.3s;
+
+/*
+   IMPORTANTE:
+   Se utiliza nav > a para no aplicar estos estilos
+   a los enlaces de Facebook, Instagram y YouTube.
+*/
+
+nav > a {
+    text-decoration: none;
+
+    color: var(--verde-oscuro);
+
+    font-weight: 600;
+
+    font-size: 0.95rem;
+
+    transition:
+        color 0.3s ease;
 }
 
-nav a:hover {
-  color: var(--dorado);
+
+nav > a:hover {
+    color: var(--verde-base);
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: var(--verde-oscuro);
+
+nav > a.active,
+nav > a[aria-current="page"] {
+    color: var(--verde-base);
 }
 
-/* BOTÓN DE ADMISIÓN */
+
+/* =========================================
+   REDES SOCIALES DEL HEADER
+========================================= */
+
+.nav-redes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding-left: 14px;
+
+    margin-left: 2px;
+
+    border-left:
+        1px solid #d9e2dc;
+}
+
+
+.nav-redes a {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--verde-claro);
+
+    color: var(--verde-oscuro);
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.nav-redes a:hover {
+    background-color: var(--verde-base);
+
+    color: var(--blanco);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   BOTÓN ADMISIÓN / TU CEJOMA
+========================================= */
+
 .btn-admision {
     background-color: var(--dorado);
+
     color: var(--oscuro) !important;
+
     padding: 10px 22px;
+
     border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(244, 201, 93, 0.3);
+
+    box-shadow:
+        0 4px 15px rgba(244, 201, 93, 0.4);
+
     text-transform: uppercase;
 }
 
-/* FOOTER */
-footer {
-  background: var(--oscuro);
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 0;
+
+/* =========================================
+   BOTÓN MENÚ MÓVIL
+========================================= */
+
+.menu-toggle {
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    font-size: 1.8rem;
+
+    cursor: pointer;
+
+    color: var(--verde-oscuro);
+
+    padding: 5px;
 }
 
-footer p { margin-bottom: 5px; font-size: 0.9rem; }
-footer span { color: var(--dorado); font-weight: 600; }
 
-/* RESPONSIVE GLOBAL */
-@media (max-width: 992px) {
-  .marca-texto h1 { font-size: 1rem; }
-  .marca-texto p { display: none; }
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .marca-texto h1 {
+        font-size: 1rem;
+    }
+
+
+    .marca-texto h2 {
+        font-size: 0.74rem;
+    }
+
+
+    nav {
+        gap: 13px;
+    }
+
+
+    nav > a {
+        font-size: 0.88rem;
+    }
+
+
+    .nav-redes {
+        gap: 6px;
+        padding-left: 10px;
+    }
+
+
+    .nav-redes a {
+        width: 31px;
+        height: 31px;
+
+        font-size: 0.85rem;
+    }
+
 }
+
+
+/* =========================================
+   RESPONSIVE DE NAVEGACIÓN
+========================================= */
 
 @media (max-width: 768px) {
-  .barra_principal { display: none; }
-  
-  .encabezado { height: 70px; }
-  .marca img { height: 50px; }
-  .marca-texto h2 { display: none; }
 
-  .menu-toggle { display: block; }
+    .barra_principal {
+        display: none;
+    }
 
-  nav {
-    position: fixed;
-    top: 70px;
-    left: -100%;
-    flex-direction: column;
-    background: var(--blanco);
-    width: 100%;
-    height: calc(100vh - 70px);
-    transition: 0.4s ease-in-out;
-    padding-top: 40px;
-    z-index: 999;
-  }
 
-  nav.mostrar { left: 0; }
+    .encabezado {
+        height: 70px;
+        min-height: 70px;
 
-  nav a {
-    margin: 15px 0;
-    font-size: 1.2rem;
-    width: 80%;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  nav .btn-admision { margin-left: 0; margin-top: 10px; }
+        padding: 7px 5%;
+    }
+
+
+    .marca {
+        gap: 9px;
+
+        max-width:
+            calc(100% - 55px);
+    }
+
+
+    .marca img {
+        height: 50px;
+    }
+
+
+    .marca-texto h1 {
+        font-size: 0.85rem;
+        line-height: 1.1;
+    }
+
+
+    .marca-texto h2 {
+        display: none;
+    }
+
+
+    .menu-toggle {
+        display: block;
+
+        position: relative;
+
+        z-index: 1001;
+    }
+
+
+    nav {
+        position: fixed;
+
+        top: 70px;
+        left: -100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        background: var(--blanco);
+
+        width: 100%;
+
+        height:
+            calc(100vh - 70px);
+
+        transition:
+            left 0.3s ease-in-out;
+
+        padding: 38px 25px;
+
+        z-index: 999;
+
+        gap: 7px;
+
+        overflow-y: auto;
+    }
+
+
+    nav.mostrar {
+        left: 0;
+    }
+
+
+    /*
+       Solo los enlaces principales ocupan el 90%.
+       Los iconos de redes NO reciben esta regla.
+    */
+
+    nav > a {
+        width: 90%;
+
+        text-align: center;
+
+        padding: 13px;
+
+        font-size: 1.05rem;
+
+        border-bottom:
+            1px solid #edf1ef;
+    }
+
+
+    .nav-redes {
+        display: flex;
+
+        border-left: none;
+
+        padding-left: 0;
+
+        margin-left: 0;
+
+        margin-top: 22px;
+
+        gap: 15px;
+    }
+
+
+    .nav-redes a {
+        width: 46px;
+        height: 46px;
+
+        font-size: 1.2rem;
+    }
+
+}
+
+
+/* =========================================
+   MÓVILES PEQUEÑOS
+========================================= */
+
+@media (max-width: 480px) {
+
+    .marca-texto h1 {
+        font-size: 0.74rem;
+    }
+
 }

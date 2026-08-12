@@ -1,0 +1,51 @@
+{
+  "institucion": {
+    "nombre": "Politécnico Prof. José Mercedes Alvino",
+    "lema": "Formando con Amor Seres Justos y Competentes.",
+    "periodoLectivo": "2026-2027"
+  },
+  "comunicados": [
+    {
+      "id": 1,
+      "fecha": "10 de febrero de 2026",
+      "categoria": "Admisiones",
+      "titulo": "Apertura del Proceso de Admisiones",
+      "resumen": "Informamos que ha iniciado la recepción de solicitudes para el nuevo ciclo lectivo.",
+      "contenidoDetallado": "El proceso de admisiones estará disponible hasta el 30 de marzo. Todos los aspirantes deben presentar su documentación completa en el Departamento de Registro y Control Académico."
+    },
+    {
+      "id": 2,
+      "fecha": "5 de febrero de 2026",
+      "categoria": "Registro",
+      "titulo": "Inicio de Pasantías Técnicas",
+      "resumen": "Estudiantes del último año de las áreas técnicas inician su etapa práctica.",
+      "contenidoDetallado": "Coordinación Técnica ha publicado el listado de empresas asignadas para el período de pasantías. Los estudiantes deben verificar sus asignaciones en la coordinación correspondiente."
+    }
+  ],
+  "ofertaAcademica": [
+    {
+      "id": "alojamiento",
+      "icono": "fa-hotel",
+      "titulo": "Servicios de Alojamiento",
+      "descripcion": "Formación técnica especializada en recepción hotelera, gestión de reservas, atención al huésped, operaciones de pisos y estándares internacionales de calidad turística.",
+      "planEstudiosUrl": "documentos_cejoma/2025_06_27_HOYT-03_3-Bachillerato%20Te%CC%81cnico%20en%20Servicios%20de%20Alojamiento.pdf",
+      "imagen": "img/servicios_de_alojamiento.jpeg"
+    },
+    {
+      "id": "salud",
+      "icono": "fa-heart-pulse",
+      "titulo": "Atención a Emergencias de Salud",
+      "descripcion": "Capacitación avanzada en soporte vital básico y de urgencias, primeros auxilios, gestión prehospitalaria, protocolos de respuesta inmediata y prevención primaria.",
+      "planEstudiosUrl": "documentos_cejoma/20250627_SABI-03_3_BT%20en%20Atecio%CC%81n%20a%20Emergencias%20de%20Salud.pdf",
+      "imagen": "img/atencion_a_emergencias_de_salud.jpeg"
+    },
+    {
+      "id": "logistica",
+      "icono": "fa-truck-ramp-box",
+      "titulo": "Logística y Transporte",
+      "descripcion": "Especialización en gestión de almacenes, cadena de suministro, control de inventarios, despacho aduanal y operatividad de transporte nacional e internacional.",
+      "planEstudiosUrl": "documentos_cejoma/ZIcR-ayc037-3-bt-logistica-y-transportepdf.pdf",
+      "imagen": "img/logistica_y_transporte.jpeg"
+    }
+  ]
+}

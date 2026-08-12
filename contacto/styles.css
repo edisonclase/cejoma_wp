@@ -1,121 +1,914 @@
+/* =====================================================
+   CEJOMA
+   PÁGINA DE CONTACTO
+===================================================== */
+
+
 /* =========================================
-   ESTILOS ESPECÍFICOS DE CONTACTO
-   ========================================= */
+   CONTENEDOR GENERAL
+========================================= */
+
 .contacto_pagina {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding:
+        50px 20px 80px;
 }
 
-.contacto_contenedor {
-  display: flex;
-  gap: 50px;
-  align-items: flex-start;
-  flex-wrap: wrap;
+
+/* =========================================
+   ENCABEZADO DE CONTACTO
+========================================= */
+
+.contacto_encabezado {
+    text-align: center;
+
+    max-width: 800px;
+
+    margin:
+        0 auto 50px;
+
+    padding:
+        35px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(11, 61, 36, 0.05) 0%,
+            rgba(244, 201, 93, 0.10) 100%
+        );
+
+    border:
+        1px solid rgba(11, 61, 36, 0.08);
+
+    border-radius:
+        20px;
 }
 
-.info_contacto {
-  flex: 1;
-  min-width: 300px;
+
+/* =========================================
+   BADGE
+========================================= */
+
+.contacto_badge {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    background:
+        var(--verde-base);
+
+    color:
+        var(--blanco);
+
+    padding:
+        7px 16px;
+
+    border-radius:
+        30px;
+
+    font-size:
+        0.8rem;
+
+    font-weight:
+        600;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        0.5px;
+
+    margin-bottom:
+        15px;
 }
+
+
+/* =========================================
+   TÍTULO
+========================================= */
 
 .titulo_lateral {
-  color: var(--verde-oscuro);
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+    color:
+        var(--verde-oscuro);
+
+    font-size:
+        2.4rem;
+
+    font-weight:
+        800;
+
+    line-height:
+        1.2;
+
+    margin:
+        0;
 }
 
-.subtitulo_contacto {
-  color: #666;
-  margin-bottom: 40px;
-}
-
-.metodos_contacto {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  margin-bottom: 40px;
-}
-
-.item_contacto {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.item_contacto i {
-  font-size: 1.5rem;
-  color: var(--verde-base);
-  background: var(--verde-claro);
-  width: 55px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-}
-
-.item_contacto span {
-  display: block;
-  font-weight: bold;
-  color: var(--verde-oscuro);
-  font-size: 1rem;
-}
-
-.item_contacto p { color: #444; }
-
-/* --- CONTACTO --- */
-.contacto { padding: 60px 5%; text-align: center; }
-.redes { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-.redes a {
-  width: 60px; height: 60px;
-  background: white;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.5rem; color: var(--verde-base);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-.redes a:hover { background: var(--dorado); color: white; transform: translateY(-5px); }
 
 /* =========================================
-   CONTENEDOR DEL MAPA (CON RELIEVE)
-   ========================================= */
-.mapa_contenedor {
-  flex: 1.2;
-  min-width: 350px;
+   LÍNEA DECORATIVA
+========================================= */
+
+.contacto_linea {
+    width:
+        70px;
+
+    height:
+        4px;
+
+    background:
+        var(--dorado);
+
+    border-radius:
+        4px;
+
+    margin:
+        15px auto 20px;
 }
+
+
+/* =========================================
+   SUBTÍTULO
+========================================= */
+
+.subtitulo_contacto {
+    color:
+        #5e6878;
+
+    font-size:
+        1.05rem;
+
+    line-height:
+        1.7;
+
+    margin:
+        0;
+}
+
+
+/* =========================================
+   CONTENEDOR DE INFORMACIÓN Y MAPA
+========================================= */
+
+.contacto_contenedor {
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(320px, 0.9fr)
+        minmax(420px, 1.2fr);
+
+    gap:
+        50px;
+
+    align-items:
+        start;
+}
+
+
+/* =========================================
+   INFORMACIÓN DE CONTACTO
+========================================= */
+
+.info_contacto {
+    min-width:
+        0;
+}
+
+
+.metodos_contacto {
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        18px;
+}
+
+
+/* =========================================
+   TARJETA DE CONTACTO
+========================================= */
+
+.item_contacto {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    background:
+        var(--blanco);
+
+    padding:
+        18px 20px;
+
+    border:
+        1px solid rgba(0, 0, 0, 0.05);
+
+    border-radius:
+        14px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+@media (hover: hover) {
+
+    .item_contacto:hover {
+        transform:
+            translateY(-3px);
+
+        box-shadow:
+            0 12px 28px rgba(11, 61, 36, 0.10);
+
+        border-color:
+            rgba(31, 143, 74, 0.18);
+    }
+
+}
+
+
+/* =========================================
+   ICONO
+========================================= */
+
+.item_icono {
+    flex-shrink:
+        0;
+}
+
+
+.item_icono i {
+    width:
+        56px;
+
+    height:
+        56px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        var(--verde-claro);
+
+    color:
+        var(--verde-base);
+
+    border-radius:
+        14px;
+
+    font-size:
+        1.4rem;
+}
+
+
+/* =========================================
+   CONTENIDO DEL ITEM
+========================================= */
+
+.item_contenido {
+    min-width:
+        0;
+}
+
+
+.item_contenido span {
+    display:
+        block;
+
+    color:
+        var(--verde-oscuro);
+
+    font-size:
+        0.95rem;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        3px;
+}
+
+
+.item_contenido p {
+    color:
+        #4a5568;
+
+    margin:
+        0;
+
+    font-size:
+        0.95rem;
+
+    line-height:
+        1.5;
+}
+
+
+.item_contenido a {
+    color:
+        inherit;
+
+    text-decoration:
+        none;
+
+    overflow-wrap:
+        anywhere;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.item_contenido a:hover {
+    color:
+        var(--verde-base);
+
+    text-decoration:
+        underline;
+}
+
+
+/* =========================================
+   MAPA
+========================================= */
+
+.mapa_contenedor {
+    min-width:
+        0;
+}
+
+
+/* =========================================
+   CAJA DEL MAPA
+========================================= */
 
 .caja_mapa_relieve {
-  background: white;
-  padding: 15px;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  overflow: hidden;
-  transition: transform 0.4s ease;
+    background:
+        var(--blanco);
+
+    padding:
+        15px;
+
+    border-radius:
+        20px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+
+    border:
+        1px solid rgba(0, 0, 0, 0.04);
+
+    overflow:
+        hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
-.caja_mapa_relieve:hover {
-  transform: translateY(-5px);
+
+@media (hover: hover) {
+
+    .caja_mapa_relieve:hover {
+        transform:
+            translateY(-5px);
+
+        box-shadow:
+            0 18px 40px rgba(11, 61, 36, 0.14);
+    }
+
 }
 
-.caja_mapa_relieve iframe { border-radius: 10px; }
 
-.boton_mapa { padding: 20px; text-align: center; }
+/* =========================================
+   IFRAME DEL MAPA
+========================================= */
+
+.caja_mapa_relieve iframe {
+    display:
+        block;
+
+    width:
+        100%;
+
+    border:
+        0;
+
+    border-radius:
+        12px;
+}
+
+
+/* =========================================
+   BOTÓN MAPA
+========================================= */
+
+.boton_mapa {
+    padding:
+        20px 10px 8px;
+
+    text-align:
+        center;
+}
+
 
 .boton_mapa a {
-  display: inline-block;
-  background: var(--verde-oscuro);
-  color: var(--dorado);
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: 0.3s;
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    background:
+        var(--verde-oscuro);
+
+    color:
+        var(--dorado);
+
+    padding:
+        12px 25px;
+
+    text-decoration:
+        none;
+
+    border-radius:
+        50px;
+
+    font-weight:
+        700;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
+
 .boton_mapa a:hover {
-  background: var(--verde-base);
-  color: white;
-  box-shadow: 0 5px 15px rgba(31, 143, 74, 0.3);
+    background:
+        var(--verde-base);
+
+    color:
+        var(--blanco);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(31, 143, 74, 0.30);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer-cejoma {
+    background:
+        linear-gradient(
+            135deg,
+            #081d12 0%,
+            var(--verde-oscuro) 100%
+        );
+
+    color:
+        var(--blanco);
+
+    padding:
+        42px 5% 22px;
+
+    margin-top:
+        0;
+}
+
+
+.footer-contenedor {
+    max-width:
+        1140px;
+
+    margin:
+        0 auto;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap:
+        35px;
+}
+
+
+/* =========================================
+   IDENTIDAD DEL FOOTER
+========================================= */
+
+.footer-identidad {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        16px;
+
+    text-align:
+        left;
+}
+
+
+.footer-logo {
+    width:
+        72px;
+
+    height:
+        72px;
+
+    object-fit:
+        contain;
+
+    background:
+        var(--blanco);
+
+    border-radius:
+        50%;
+
+    padding:
+        5px;
+}
+
+
+.footer-identidad h3 {
+    margin:
+        0 0 2px;
+
+    color:
+        var(--dorado);
+
+    font-size:
+        1.3rem;
+
+    font-weight:
+        800;
+}
+
+
+.footer-identidad p {
+    margin:
+        0;
+
+    color:
+        var(--blanco);
+
+    font-weight:
+        600;
+}
+
+
+.footer-identidad small {
+    color:
+        rgba(255, 255, 255, 0.70);
+}
+
+
+/* =========================================
+   REDES SOCIALES DEL FOOTER
+========================================= */
+
+.footer-redes {
+    text-align:
+        right;
+}
+
+
+.footer-redes h4 {
+    color:
+        var(--dorado);
+
+    font-size:
+        0.9rem;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        0.08em;
+
+    margin-bottom:
+        12px;
+}
+
+
+.footer-redes-iconos {
+    display:
+        flex;
+
+    justify-content:
+        flex-end;
+
+    gap:
+        12px;
+}
+
+
+.footer-redes-iconos a {
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color:
+        var(--blanco);
+
+    text-decoration:
+        none;
+
+    font-size:
+        1.15rem;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.footer-redes-iconos a:hover {
+    background-color:
+        var(--dorado);
+
+    border-color:
+        var(--dorado);
+
+    color:
+        var(--verde-oscuro);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================
+   DIVISOR DEL FOOTER
+========================================= */
+
+.footer-divider {
+    max-width:
+        1140px;
+
+    height:
+        1px;
+
+    margin:
+        30px auto 20px;
+
+    background:
+        rgba(255, 255, 255, 0.13);
+}
+
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.footer-copyright {
+    text-align:
+        center;
+
+    margin:
+        0;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-size:
+        0.85rem;
+}
+
+
+.footer-copyright span {
+    color:
+        var(--dorado);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .contacto_pagina {
+        padding:
+            40px 20px 65px;
+    }
+
+
+    .contacto_contenedor {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            35px;
+    }
+
+
+    .footer-contenedor {
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+    }
+
+
+    .footer-identidad {
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+    }
+
+
+    .footer-redes {
+        text-align:
+            center;
+    }
+
+
+    .footer-redes-iconos {
+        justify-content:
+            center;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 600px) {
+
+    .contacto_pagina {
+        padding:
+            25px 15px 55px;
+    }
+
+
+    .contacto_encabezado {
+        padding:
+            28px 18px;
+
+        margin-bottom:
+            35px;
+
+        border-radius:
+            15px;
+    }
+
+
+    .titulo_lateral {
+        font-size:
+            1.8rem;
+    }
+
+
+    .subtitulo_contacto {
+        font-size:
+            0.95rem;
+    }
+
+
+    .item_contacto {
+        align-items:
+            flex-start;
+
+        padding:
+            16px;
+    }
+
+
+    .item_icono i {
+        width:
+            48px;
+
+        height:
+            48px;
+
+        font-size:
+            1.2rem;
+    }
+
+
+    .item_contenido span {
+        font-size:
+            0.9rem;
+    }
+
+
+    .item_contenido p {
+        font-size:
+            0.9rem;
+    }
+
+
+    .caja_mapa_relieve {
+        padding:
+            10px;
+
+        border-radius:
+            15px;
+    }
+
+
+    .caja_mapa_relieve iframe {
+        height:
+            320px;
+    }
+
+
+    .boton_mapa {
+        padding:
+            16px 5px 5px;
+    }
+
+
+    .boton_mapa a {
+        width:
+            100%;
+
+        padding:
+            12px 15px;
+    }
+
+
+    .footer-logo {
+        width:
+            64px;
+
+        height:
+            64px;
+    }
+
 }

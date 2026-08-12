@@ -1,126 +1,639 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Politécnico Profesor José Mercedes Alvino (CEJOMA). Educación técnico-profesional en Santiago, República Dominicana.">
-  <meta name="author" content="Edison Clase">
-  <meta name="robots" content="index, follow">
-  <title>CEJOMA | Politécnico Profesor José Mercedes Alvino</title>
-  <link rel="icon" type="image/png" href="../img/logo_jma.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="../css/global.css">
-  <link rel="stylesheet" href="../contacto/styles.css">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Información de contacto, ubicación y horario de atención del Politécnico Prof. José Mercedes Alvino (CEJOMA), en Santiago, República Dominicana."
+  >
+
+  <title>Politécnico Prof. José Mercedes Alvino | Contacto</title>
+
+
+  <!-- Favicon -->
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="../img/cejoma_logo.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="../img/cejoma_logo.png"
+  >
+
+
+  <!-- CSS global -->
+
+  <link
+    rel="stylesheet"
+    href="../css/global.css"
+  >
+
+
+  <!-- CSS específico de Contacto -->
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+
+
+  <!-- Font Awesome -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
+
 </head>
 
+
 <body>
+
+
+  <!-- =========================================
+       ACCESIBILIDAD
+  ========================================== -->
+
+  <a
+    href="#contenido-principal"
+    class="skip-link"
+  >
+    Saltar al contenido principal
+  </a>
+
+
+  <!-- =========================================
+       BARRA SUPERIOR
+  ========================================== -->
+
   <div class="barra_principal">
-    <span><i class="fa-solid fa-envelope"></i> cejomal.2014@gmail.com</span>
-    <span><i class="fa-solid fa-phone"></i> (809) 570-6598</span>
-    <span><i class="fa-solid fa-location-dot"></i> Canabacoa, Puñal, Santiago R.D.</span>
+
+    <span>
+      <i class="fas fa-phone-alt"></i>
+      (809) 570-6598
+    </span>
+
+
+    <span>
+      <i class="fas fa-envelope"></i>
+      cejomal2014@gmail.com
+    </span>
+
+
+    <span>
+      <i class="fas fa-map-marker-alt"></i>
+      Santiago, República Dominicana
+    </span>
+
   </div>
-  
-<header class="encabezado">
-  <div class="marca">
-    <a href="../index.html"> 
-      <img src="../img/Logo_cejoma.jpg" alt="Logo de Cejoma">
+
+
+  <!-- =========================================
+       ENCABEZADO
+  ========================================== -->
+
+  <header
+    class="encabezado"
+    role="banner"
+  >
+
+
+    <!-- Marca institucional -->
+
+    <a
+      href="../index.html"
+      class="marca"
+      aria-label="Inicio - Politécnico Prof. José Mercedes Alvino"
+    >
+
+      <img
+        src="../img/cejoma_logo.png"
+        alt="Logotipo oficial del Politécnico Prof. José Mercedes Alvino"
+      >
+
+
+      <div class="marca-texto">
+
+        <h1>
+          Politécnico Prof. José Mercedes Alvino
+        </h1>
+
+        <h2>
+          Formando con Amor Seres Justos y Competentes.
+        </h2>
+
+      </div>
+
     </a>
-    <div class="marca-texto">
-      <h1>Politécnico Profesor José Mercedes Alvino</h1>
-      <h2>CEJOMA</h2>
-      <p>Formando con amor seres justos y competentes.</p>
-    </div>
-  </div> 
-    <nav id="menu">
-      <a href="../index.html">Inicio</a>
-      <a href="../nosotros/index.html">Nosotros</a>
-      <a href="../oferta_academica/index.html">Oferta Académica</a>
-      <a href="../contacto/index.html">Contacto</a>
-      <a class="btn-admision" href="#">Admisión</a>
+
+
+    <!-- Botón móvil -->
+
+    <button
+      class="menu-toggle"
+      id="btn-menu"
+      aria-label="Abrir menú de navegación"
+      aria-expanded="false"
+      aria-controls="nav-principal"
+    >
+
+      <i
+        class="fas fa-bars"
+        aria-hidden="true"
+      ></i>
+
+    </button>
+
+
+    <!-- Navegación principal -->
+
+    <nav
+      id="nav-principal"
+      role="navigation"
+      aria-label="Navegación principal"
+    >
+
+      <a href="../index.html">
+        Inicio
+      </a>
+
+
+      <a href="../nosotros/index.html">
+        Nosotros
+      </a>
+
+
+      <a href="../oferta_academica/index.html">
+        Oferta Académica
+      </a>
+
+
+      <a
+        href="index.html"
+        aria-current="page"
+      >
+        Contacto
+      </a>
+
+
+      <!--
+      <a
+        href="../tu_cejoma/index.html"
+        class="btn-admision"
+      >
+        Tu CEJOMA
+      </a>
+      -->
+
+
+      <!-- Redes sociales -->
+
+      <div
+        class="nav-redes"
+        aria-label="Redes sociales de CEJOMA"
+      >
+
+        <a
+          href="https://www.facebook.com/profile.php?id=100009640831152"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook de CEJOMA"
+          title="Facebook de CEJOMA"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+
+        <a
+          href="https://www.instagram.com/jose_mercedes_alvino/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram de CEJOMA"
+          title="Instagram de CEJOMA"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+
+        <a
+          href="https://www.youtube.com/@politecnicoprofesorjosemer7603"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Canal de YouTube de CEJOMA"
+          title="YouTube de CEJOMA"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
     </nav>
-  <div class="menu-toggle" id="btnMenu">☰</div>
-</header>
 
-<main class="contacto_pagina animar_entrada">
-  <div class="contacto_contenedor">
-    
-    <div class="info_contacto">
-      <h2 class="titulo_lateral">Ponte en contacto:</h2>
-      <p class="subtitulo_contacto">Estamos para servirte. Utiliza cualquiera de nuestros canales oficiales.</p>
+  </header>
 
-      <div class="metodos_contacto">
-        <div class="item_contacto">
-          <i class="fa-solid fa-phone"></i>
-          <div>
-            <span>Teléfono</span>
-            <p>(809) 570-6598</p>
+
+  <!-- =========================================
+       CONTENIDO PRINCIPAL
+  ========================================== -->
+
+  <main
+    id="contenido-principal"
+    class="contacto_pagina"
+  >
+
+
+    <!-- Encabezado -->
+
+    <section
+      class="contacto_encabezado"
+      aria-labelledby="titulo-contacto"
+    >
+
+      <span class="contacto_badge">
+
+        <i class="fa-solid fa-comments"></i>
+
+        Estamos para servirte
+
+      </span>
+
+
+      <h2
+        id="titulo-contacto"
+        class="titulo_lateral"
+      >
+        Ubícanos y Contáctanos
+      </h2>
+
+
+      <div
+        class="contacto_linea"
+        aria-hidden="true"
+      ></div>
+
+
+      <p class="subtitulo_contacto">
+
+        Estamos disponibles para atender cualquier inquietud
+        académica o administrativa.
+
+      </p>
+
+    </section>
+
+
+    <!-- Contenido de contacto -->
+
+    <div class="contacto_contenedor">
+
+
+      <!-- =========================================
+           INFORMACIÓN
+      ========================================== -->
+
+      <section
+        class="info_contacto"
+        aria-label="Información de contacto institucional"
+      >
+
+        <div class="metodos_contacto">
+
+
+          <!-- Teléfono -->
+
+          <div class="item_contacto">
+
+            <div class="item_icono">
+
+              <i
+                class="fa-solid fa-phone"
+                aria-hidden="true"
+              ></i>
+
+            </div>
+
+
+            <div class="item_contenido">
+
+              <span>
+                Teléfono Institucional
+              </span>
+
+
+              <p>
+
+                <a href="tel:+18095706598">
+                  +1 (809) 570-6598
+                </a>
+
+              </p>
+
+            </div>
+
           </div>
-        </div>
 
-        <div class="item_contacto">
-          <i class="fa-solid fa-envelope"></i>
-          <div>
-            <span>Correo Electrónico</span>
-            <p>cejomal.2014@gmail.com</p>
+
+          <!-- Correo -->
+
+          <div class="item_contacto">
+
+            <div class="item_icono">
+
+              <i
+                class="fa-solid fa-envelope"
+                aria-hidden="true"
+              ></i>
+
+            </div>
+
+
+            <div class="item_contenido">
+
+              <span>
+                Correo Electrónico
+              </span>
+
+
+              <p>
+
+                <a href="mailto:cejomal2014@gmail.com">
+                  cejomal2014@gmail.com
+                </a>
+
+              </p>
+
+            </div>
+
           </div>
-        </div>
 
-        <div class="item_contacto">
-          <i class="fa-solid fa-location-dot"></i>
-          <div>
-            <span>Ubicación</span>
-            <p>Canabacoa, Puñal, Santiago, R.D.</p>
+
+          <!-- Horario -->
+
+          <div class="item_contacto">
+
+            <div class="item_icono">
+
+              <i
+                class="fa-solid fa-clock"
+                aria-hidden="true"
+              ></i>
+
+            </div>
+
+
+            <div class="item_contenido">
+
+              <span>
+                Horario de Atención
+              </span>
+
+
+              <p>
+                Lunes a Viernes:
+                7:30 a.m. – 3:30 p.m.
+              </p>
+
+            </div>
+
           </div>
-        </div>
-      </div>
 
-      <div class="redes_contacto">
-        <h3 style="color: var(--verde-oscuro); margin-bottom: 20px;">Nuestras Redes Oficiales:</h3>
-        <div class="redes"> <a href="https://www.facebook.com/profile.php?id=100009640831152" target="_blank" title="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/jose_mercedes_alvino/" target="_blank" title="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="http://www.youtube.com/@politecnicoprofesorjosemer7603" target="_blank" title="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
+
+          <!-- Ubicación -->
+
+          <div class="item_contacto">
+
+            <div class="item_icono">
+
+              <i
+                class="fa-solid fa-location-dot"
+                aria-hidden="true"
+              ></i>
+
+            </div>
+
+
+            <div class="item_contenido">
+
+              <span>
+                Ubicación
+              </span>
+
+
+              <p>
+                Canabacoa, Santiago,
+                República Dominicana.
+                Distrito Educativo 08-03.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- Código institucional -->
+
+          <div class="item_contacto">
+
+            <div class="item_icono">
+
+              <i
+                class="fa-solid fa-school"
+                aria-hidden="true"
+              ></i>
+
+            </div>
+
+
+            <div class="item_contenido">
+
+              <span>
+                Código de Gestión
+              </span>
+
+
+              <p>
+                14601
+              </p>
+
+            </div>
+
+          </div>
+
         </div>
-      </div>
+
+      </section>
+
+
+      <!-- =========================================
+           MAPA
+      ========================================== -->
+
+      <section
+        class="mapa_contenedor"
+        aria-label="Mapa de localización del politécnico"
+      >
+
+        <div class="caja_mapa_relieve">
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.650893340579!2d-70.6558!3d19.4168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb1cf2382104595%3A0xb36b5db791c12140!2sPolitecnico%20Profesor%20Jose%20Mercedes%20Alvino!5e0!3m2!1ses!2sdo!4v1710000000000!5m2!1ses!2sdo"
+            width="100%"
+            height="380"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación del Politécnico Prof. José Mercedes Alvino"
+          ></iframe>
+
+
+          <div class="boton_mapa">
+
+            <a
+              href="https://maps.google.com/?q=Politecnico+Profesor+Jose+Mercedes+Alvino+Canabacoa+Santiago"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <i
+                class="fa-solid fa-map-location-dot"
+                aria-hidden="true"
+              ></i>
+
+              Abrir ubicación en Google Maps
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
     </div>
 
-    <div class="mapa_contenedor">
-      <div class="caja_mapa_relieve">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.5623456789!2d-70.645678!3d19.412345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDI0JzQ0LjQiTiA3MMKwMzgnNDQuNCJX!5e0!3m2!1ses!2sdo!4v1625500000000" 
-          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
-        <div class="boton_mapa">
-          <a href="https://maps.google.com" target="_blank">
-            <i class="fa-solid fa-map-location-dot"></i> Abrir en Google Maps
-          </a>
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer
+    role="contentinfo"
+    class="footer-cejoma"
+  >
+
+    <div class="footer-contenedor">
+
+
+      <!-- Identidad -->
+
+      <div class="footer-identidad">
+
+        <img
+          src="../img/cejoma_logo.png"
+          alt="Logo CEJOMA"
+          class="footer-logo"
+        >
+
+
+        <div>
+
+          <h3>
+            CEJOMA
+          </h3>
+
+
+          <p>
+            Politécnico Prof. José Mercedes Alvino
+          </p>
+
+
+          <small>
+            Formando con Amor Seres Justos y Competentes.
+          </small>
+
         </div>
+
       </div>
+
+
+      <!-- Redes sociales -->
+
+      <div class="footer-redes">
+
+        <h4>
+          Síguenos
+        </h4>
+
+
+        <div class="footer-redes-iconos">
+
+          <a
+            href="https://www.facebook.com/profile.php?id=100009640831152"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook de CEJOMA"
+            title="Facebook de CEJOMA"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+
+          <a
+            href="https://www.instagram.com/jose_mercedes_alvino/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de CEJOMA"
+            title="Instagram de CEJOMA"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+
+
+          <a
+            href="https://www.youtube.com/@politecnicoprofesorjosemer7603"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Canal de YouTube de CEJOMA"
+            title="YouTube de CEJOMA"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
 
-  </div>
-</main>
 
-  <footer>
-    <p>© CEJOMA – Todos los derechos reservados</p>
-    <p>Diseñado por <span>Edison Clase</span></p>
+    <div class="footer-divider"></div>
+
+
+    <p class="footer-copyright">
+      © 2026 <span>Politécnico Prof. José Mercedes Alvino (CEJOMA)</span>.
+      Todos los derechos reservados.
+    </p>
+
   </footer>
-    <script>
-    const btnMenu = document.getElementById('btnMenu');
-    const menu = document.getElementById('menu');
 
-    btnMenu.addEventListener('click', () => {
-    menu.classList.toggle('mostrar');
-    });
-  </script>
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+
+  <script src="../home/main.js"></script>
 
 </body>
 

@@ -1,100 +1,574 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Politécnico Profesor José Mercedes Alvino (CEJOMA). Educación técnico-profesional en Santiago, República Dominicana.">
-  <meta name="author" content="Edison Clase">
-  <meta name="robots" content="index, follow">
-  <title>CEJOMA | Oferta Académica</title>
-  <link rel="icon" type="image/png" href="../img/logo_jma.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="../css/global.css">
-  <link rel="stylesheet" href="../oferta_academica/styles.css">
+
+  <meta
+    name="description"
+    content="Conoce la oferta académica técnico-profesional del Politécnico Prof. José Mercedes Alvino (CEJOMA): Logística y Transporte, Atención a Emergencias de Salud y Servicios de Alojamiento."
+  >
+
+  <title>Politécnico Prof. José Mercedes Alvino | Oferta Académica</title>
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="../img/cejoma_logo.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="../img/cejoma_logo.png"
+  >
+
+  <!-- CSS global -->
+  <link
+    rel="stylesheet"
+    href="../css/global.css"
+  >
+
+  <!-- CSS exclusivo de Oferta Académica -->
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
 </head>
 
 <body>
+
+  <!-- Accesibilidad -->
+  <a
+    href="#contenido-principal"
+    class="skip-link"
+  >
+    Saltar al contenido principal
+  </a>
+
+
+  <!-- =========================================
+       BARRA SUPERIOR
+  ========================================== -->
+
   <div class="barra_principal">
-    <span><i class="fa-solid fa-envelope"></i> cejomal.2014@gmail.com</span>
-    <span><i class="fa-solid fa-phone"></i> (809) 570-6598</span>
-    <span><i class="fa-solid fa-location-dot"></i> Canabacoa, Puñal, Santiago R.D.</span>
+
+    <span>
+      <i class="fas fa-phone-alt"></i>
+      (809) 570-6598
+    </span>
+
+    <span>
+      <i class="fas fa-envelope"></i>
+      cejomal2014@gmail.com
+    </span>
+
+    <span>
+      <i class="fas fa-map-marker-alt"></i>
+      Santiago, República Dominicana
+    </span>
+
   </div>
 
-<header class="encabezado">
-  <div class="marca">
-    <a href="../index.html"> 
-      <img src="../img/Logo_cejoma.jpg" alt="Logo de Cejoma">
+
+  <!-- =========================================
+       ENCABEZADO PRINCIPAL
+  ========================================== -->
+
+  <header
+    class="encabezado"
+    role="banner"
+  >
+
+    <a
+      href="../index.html"
+      class="marca"
+      aria-label="Inicio - Politécnico Prof. José Mercedes Alvino"
+    >
+
+      <img
+        src="../img/cejoma_logo.png"
+        alt="Logotipo Politécnico Prof. José Mercedes Alvino"
+      >
+
+      <div class="marca-texto">
+
+        <h1>
+          Politécnico Prof. José Mercedes Alvino
+        </h1>
+
+        <h2>
+          Formando con Amor Seres Justos y Competentes.
+        </h2>
+
+      </div>
+
     </a>
-    <div class="marca-texto">
-      <h1>Politécnico Profesor José Mercedes Alvino</h1>
-      <h2>CEJOMA</h2>
-      <p>Formando con amor seres justos y competentes.</p>
-    </div>
-  </div> 
-    <nav id="menu">
-      <a href="../index.html">Inicio</a>
-      <a href="../nosotros/index.html">Nosotros</a>
-      <a href="../oferta_academica/index.html">Oferta Académica</a>
-      <a href="../contacto/index.html">Contacto</a>
-      <a class="btn-admision" href="#">Admisión</a>
+
+
+    <button
+      class="menu-toggle"
+      id="btn-menu"
+      aria-label="Abrir menú de navegación"
+      aria-expanded="false"
+      aria-controls="nav-principal"
+    >
+
+      <i
+        class="fas fa-bars"
+        aria-hidden="true"
+      ></i>
+
+    </button>
+
+
+    <nav
+      id="nav-principal"
+      role="navigation"
+      aria-label="Navegación principal"
+    >
+
+      <a href="../index.html">
+        Inicio
+      </a>
+
+      <a href="../nosotros/index.html">
+        Nosotros
+      </a>
+
+      <a
+        href="index.html"
+        aria-current="page"
+      >
+        Oferta Académica
+      </a>
+
+      <a href="../contacto/index.html">
+        Contacto
+      </a>
+
+
+      <!--
+      <a
+        href="../tu_cejoma/index.html"
+        class="btn-admision"
+      >
+        Tu CEJOMA
+      </a>
+      -->
+
+
+      <!-- Redes sociales -->
+
+      <div
+        class="nav-redes"
+        aria-label="Redes sociales de CEJOMA"
+      >
+
+        <a
+          href="https://www.facebook.com/profile.php?id=100009640831152"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook de CEJOMA"
+          title="Facebook de CEJOMA"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+
+        <a
+          href="https://www.instagram.com/jose_mercedes_alvino/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram de CEJOMA"
+          title="Instagram de CEJOMA"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+
+        <a
+          href="https://www.youtube.com/@politecnicoprofesorjosemer7603"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Canal de YouTube de CEJOMA"
+          title="YouTube de CEJOMA"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
     </nav>
-  <div class="menu-toggle" id="btnMenu">☰</div>
-</header>
-<section class="oferta_academica" id="clases">
-  <h2 class="of_aca_titulo animar_entrada">Oferta Académica</h2>
 
-  <div class="contenedor_ofertas">
-    
-    <a href="../programs/servicios_alojamiento/index.html" class="oferta_caja animar_entrada retraso-1">
-      <img class="img_clases" src="../img/servicio_alojamiento.jpg" alt="Servicios de Alojamiento">
-      <div class="capa_texto">
-        <h3>Servicios de Alojamiento</h3>
-        <span class="btn_falso">Ver Carrera <i class="fa-solid fa-arrow-right"></i></span>
+  </header>
+
+
+  <!-- =========================================
+       CONTENIDO PRINCIPAL
+  ========================================== -->
+
+  <main
+    id="contenido-principal"
+    class="oferta_pagina"
+  >
+
+
+    <!-- =========================================
+         HERO DE LA SECCIÓN
+    ========================================== -->
+
+    <section
+      class="encabezado_oferta_hero"
+      aria-labelledby="titulo-oferta"
+    >
+
+      <span class="badge_excelencia">
+
+        <i class="fa-solid fa-graduation-cap"></i>
+
+        Educación Técnica de Excelencia
+
+      </span>
+
+
+      <h2
+        id="titulo-oferta"
+        class="titulo_hero_oferta"
+      >
+        Nuestras Áreas Técnicas
+      </h2>
+
+
+      <div
+        class="linea_decorativa"
+        aria-hidden="true"
+      ></div>
+
+
+      <p class="subtitulo_hero_oferta">
+
+        Formamos profesionales altamente capacitados e innovadores,
+        preparados para responder con éxito a las exigencias del sector
+        productivo nacional e internacional.
+
+      </p>
+
+    </section>
+
+
+    <!-- =========================================
+         TARJETAS DE ÁREAS TÉCNICAS
+    ========================================== -->
+
+    <section
+      class="tarjetas_contenedor"
+      aria-label="Áreas técnicas disponibles"
+    >
+
+
+      <!-- LOGÍSTICA Y TRANSPORTE -->
+
+      <article
+        id="logistica"
+        class="tarjeta_oferta"
+      >
+
+        <div class="imagen_oferta_caja">
+
+          <img
+            src="../img/logistica_y_transporte.jpeg"
+            alt="Estudiantes del Bachillerato Técnico en Logística y Transporte"
+          >
+
+          <span class="categoria_badge">
+
+            <i class="fa-solid fa-truck-ramp-box"></i>
+
+            Logística
+
+          </span>
+
+        </div>
+
+
+        <div class="contenido_oferta">
+
+          <h3>
+            Logística y Transporte
+          </h3>
+
+
+          <p>
+
+            Capacita en la gestión estratégica de cadenas de suministro,
+            control de inventarios, procesos de aduana, distribución global
+            y operaciones de transporte con estándares internacionales.
+
+          </p>
+
+
+          <div class="acciones_oferta">
+
+            <a
+              href="../documentos_cejoma/ZIcR-ayc037-3-bt-logistica-y-transportepdf.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn_programa"
+            >
+
+              <i class="fa-solid fa-file-pdf"></i>
+
+              Plan de Estudio (PDF)
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- ATENCIÓN A EMERGENCIAS DE SALUD -->
+
+      <article
+        id="salud"
+        class="tarjeta_oferta"
+      >
+
+        <div class="imagen_oferta_caja">
+
+          <img
+            src="../img/atencion_a_emergencias_de_salud.jpeg"
+            alt="Estudiantes del Bachillerato Técnico en Atención a Emergencias de Salud"
+          >
+
+          <span class="categoria_badge badge_salud">
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+            Salud
+
+          </span>
+
+        </div>
+
+
+        <div class="contenido_oferta">
+
+          <h3>
+            Atención a Emergencias de Salud
+          </h3>
+
+
+          <p>
+
+            Prepara técnicos cualificados para la asistencia prehospitalaria,
+            soporte vital básico, gestión integral de riesgos y respuesta
+            inmediata ante situaciones de urgencia médica.
+
+          </p>
+
+
+          <div class="acciones_oferta">
+
+            <a
+              href="../documentos_cejoma/20250627_SABI-03_3_BT%20en%20Atecio%CC%81n%20a%20Emergencias%20de%20Salud.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn_programa"
+            >
+
+              <i class="fa-solid fa-file-pdf"></i>
+
+              Plan de Estudio (PDF)
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- SERVICIOS DE ALOJAMIENTO -->
+
+      <article
+        id="alojamiento"
+        class="tarjeta_oferta"
+      >
+
+        <div class="imagen_oferta_caja">
+
+          <img
+            src="../img/servicios_de_alojamiento.jpeg"
+            alt="Estudiantes del Bachillerato Técnico en Servicios de Alojamiento"
+          >
+
+          <span class="categoria_badge badge_turismo">
+
+            <i class="fa-solid fa-hotel"></i>
+
+            Turismo
+
+          </span>
+
+        </div>
+
+
+        <div class="contenido_oferta">
+
+          <h3>
+            Servicios de Alojamiento
+          </h3>
+
+
+          <p>
+
+            Desarrolla competencias clave para la gestión hotelera,
+            recepción, administración de reservas, atención de excelencia
+            al huésped y coordinación de servicios turísticos.
+
+          </p>
+
+
+          <div class="acciones_oferta">
+
+            <a
+              href="../documentos_cejoma/2025_06_27_HOYT-03_3-Bachillerato%20Te%CC%81cnico%20en%20Servicios%20de%20Alojamiento.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn_programa"
+            >
+
+              <i class="fa-solid fa-file-pdf"></i>
+
+              Plan de Estudio (PDF)
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer
+    role="contentinfo"
+    class="footer-cejoma"
+  >
+
+    <div class="footer-contenedor">
+
+      <div class="footer-identidad">
+
+        <img
+          src="../img/cejoma_logo.png"
+          alt="Logo CEJOMA"
+          class="footer-logo"
+        >
+
+
+        <div>
+
+          <h3>
+            CEJOMA
+          </h3>
+
+          <p>
+            Politécnico Prof. José Mercedes Alvino
+          </p>
+
+          <small>
+            Formando con Amor Seres Justos y Competentes.
+          </small>
+
+        </div>
+
       </div>
-    </a>
 
-    <a href="../programs/logistica_transporte/index.html" class="oferta_caja animar_entrada retraso-2">
-      <img class="img_clases" src="../img/logistica_transporte.jpg" alt="Logística y Transporte">
-      <div class="capa_texto">
-        <h3>Logística y Transporte</h3>
-        <span class="btn_falso">Ver Carrera <i class="fa-solid fa-arrow-right"></i></span>
+
+      <div class="footer-redes">
+
+        <h4>
+          Síguenos
+        </h4>
+
+
+        <div class="footer-redes-iconos">
+
+          <a
+            href="https://www.facebook.com/profile.php?id=100009640831152"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook de CEJOMA"
+            title="Facebook de CEJOMA"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+
+          <a
+            href="https://www.instagram.com/jose_mercedes_alvino/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de CEJOMA"
+            title="Instagram de CEJOMA"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+
+
+          <a
+            href="https://www.youtube.com/@politecnicoprofesorjosemer7603"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Canal de YouTube de CEJOMA"
+            title="YouTube de CEJOMA"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+
+        </div>
+
       </div>
-    </a>
 
-    <a href="../programs/atencion_emergencia_salud/index.html" class="oferta_caja animar_entrada retraso-3">
-      <img class="img_clases" src="../img/atencion_emergencias.jpg" alt="Salud">
-      <div class="capa_texto">
-        <h3>Atención a Emergencias de Salud</h3>
-        <span class="btn_falso">Ver Carrera <i class="fa-solid fa-arrow-right"></i></span>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-<section id="contacto" class="contacto">
-    <h3>Nuestras Redes</h3>
-    <div class="redes">
-      <a href="https://www.facebook.com/profile.php?id=100009640831152" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/jose_mercedes_alvino/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      <a href="http://www.youtube.com/@politecnicoprofesorjosemer7603" target="_blank"><i class="fa-brands fa-youtube"></i></a>
     </div>
-</section>
 
-  <footer class="animar_entrada">
-    <p>© CEJOMA – Todos los derechos reservados</p>
-    <p>Diseñado por <span>Edison Clase</span></p>
+
+    <div class="footer-divider"></div>
+
+
+    <p class="footer-copyright">
+      © 2026 <span>Politécnico Prof. José Mercedes Alvino (CEJOMA)</span>.
+      Todos los derechos reservados.
+    </p>
+
   </footer>
-    <script>
-    const btnMenu = document.getElementById('btnMenu');
-    const menu = document.getElementById('menu');
 
-    btnMenu.addEventListener('click', () => {
-    menu.classList.toggle('mostrar');
-    });
-  </script>
+
+  <!-- JavaScript global -->
+
+  <script src="../home/main.js"></script>
+
 </body>
+
 </html>

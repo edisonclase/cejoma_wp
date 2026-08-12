@@ -1,117 +1,510 @@
+@'
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logística y Transporte | CEJOMA</title>
-    <meta name="description" content="Perfil profesional y competencias del Bachillerato Técnico en Gestión Logística y Transporte en el Politécnico CEJOMA.">
-    <link rel="icon" type="image/png" href="../../img/logo-cejoma.png">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="../../css/global.css">
-    <link rel="stylesheet" href="../../programs/styles.css"> 
-</head>
-<body>
-<header class="encabezado">
-  <div class="marca">
-    <a href="../../index.html"> 
-      <img src="../../img/Logo_cejoma.jpg" alt="Logo de Cejoma">
-    </a>
-    <div class="marca-texto">
-      <h1>Politécnico Profesor José Mercedes Alvino</h1>
-      <h2>CEJOMA</h2>
-      <p>Formando con amor seres justos y competentes.</p>
-    </div>
-  </div> 
-    <nav id="menu">
-      <a href="../index.html">Inicio</a>
-      <a href="../nosotros/index.html">Nosotros</a>
-      <a href="../oferta_academica/index.html">Oferta Académica</a>
-      <a href="../contacto/index.html">Contacto</a>
-      <a class="btn-admision" href="#">Admisión</a>
-    </nav>
-  <div class="menu-toggle" id="btnMenu">☰</div>
-</header>
 
-    <main class="contenedor_programa animar_entrada">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Perfil profesional, competencias y campo laboral del Bachillerato Técnico en Atención a Emergencias de Salud del Politécnico Prof. José Mercedes Alvino (CEJOMA)."
+    >
+
+    <title>Atención a Emergencias de Salud | CEJOMA</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../../img/cejoma_logo.png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="../../img/cejoma_logo.png"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../styles.css"
+    >
+</head>
+
+
+<body>
+
+    <a
+        href="#contenido-principal"
+        class="skip-link"
+    >
+        Saltar al contenido principal
+    </a>
+
+
+    <div class="barra_principal">
+
+        <span>
+            <i class="fas fa-phone-alt"></i>
+            (809) 570-6598
+        </span>
+
+        <span>
+            <i class="fas fa-envelope"></i>
+            info@cejoma.edu.do
+        </span>
+
+        <span>
+            <i class="fas fa-map-marker-alt"></i>
+            Santiago, República Dominicana
+        </span>
+
+    </div>
+
+
+    <header
+        class="encabezado"
+        role="banner"
+    >
+
+        <a
+            href="../../index.html"
+            class="marca"
+            aria-label="Inicio - Politécnico Prof. José Mercedes Alvino"
+        >
+
+            <img
+                src="../../img/cejoma_logo.png"
+                alt="Logotipo del Politécnico Prof. José Mercedes Alvino"
+            >
+
+            <div class="marca-texto">
+
+                <h1>
+                    Politécnico Prof. José Mercedes Alvino
+                </h1>
+
+                <h2>
+                    Formando con Amor Seres Justos y Competentes.
+                </h2>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="btn-menu"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            aria-controls="nav-principal"
+        >
+            <i class="fas fa-bars"></i>
+        </button>
+
+
+        <nav
+            id="nav-principal"
+            aria-label="Navegación principal"
+        >
+
+            <a href="../../index.html">
+                Inicio
+            </a>
+
+            <a href="../../nosotros/index.html">
+                Nosotros
+            </a>
+
+            <a
+                href="../../oferta_academica/index.html"
+                aria-current="page"
+            >
+                Oferta Académica
+            </a>
+
+            <a href="../../contacto/index.html">
+                Contacto
+            </a>
+
+
+            <div
+                class="nav-redes"
+                aria-label="Redes sociales de CEJOMA"
+            >
+
+                <a
+                    href="https://www.facebook.com/profile.php?id=100009640831152"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook de CEJOMA"
+                    title="Facebook de CEJOMA"
+                >
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a
+                    href="https://www.instagram.com/jose_mercedes_alvino/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram de CEJOMA"
+                    title="Instagram de CEJOMA"
+                >
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a
+                    href="https://www.youtube.com/@politecnicoprofesorjosemer7603"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube de CEJOMA"
+                    title="YouTube de CEJOMA"
+                >
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main
+        id="contenido-principal"
+        class="contenedor_programa"
+    >
+
         <section class="bloque_programa">
+
             <header class="header_programa">
-                <h1 class="title">Logística y Transporte</h1>
+
+                <span class="programa_badge">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                    Área Técnica
+
+                </span>
+
+                <h1 class="title">
+                    Atención a Emergencias de Salud
+                </h1>
+
                 <div class="linea_decorativa"></div>
+
+                <p class="programa_intro">
+                    Formación técnico-profesional orientada a la atención
+                    prehospitalaria, respuesta ante emergencias y apoyo
+                    sanitario oportuno y seguro.
+                </p>
+
             </header>
 
+
             <div class="grid_contenido">
+
                 <div class="columna_imagen">
-                    <img src="../../img/lt_logo.png" alt="Estudiantes de Logística y Transporte" class="img_principal">
-                    <a href="../../documentos_cejoma/ZIcR-ayc037-3-bt-logistica-y-transportepdf.pdf" target="_blank" class="btn_pdf">
-                        <i class="fa-solid fa-file-pdf"></i> Descargar Programa Completo (PDF)
+
+                    <img
+                        src="../../img/atencion_a_emergencias_de_salud.jpeg"
+                        alt="Área Técnica de Atención a Emergencias de Salud"
+                        class="img_principal"
+                    >
+
+                    <a
+                        href="../../documentos_cejoma/20250627_SABI-03_3_BT%20en%20Atecio%CC%81n%20a%20Emergencias%20de%20Salud.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn_pdf"
+                    >
+
+                        <i class="fa-solid fa-file-pdf"></i>
+
+                        Descargar Programa Completo
+
                     </a>
+
                 </div>
 
+
                 <div class="columna_texto">
-                    <h2 class="subtitle"><i class="fa-solid fa-user-graduate"></i>PERFIL PROFESIONAL</h2>
-                    
-                    <h3 class="minititle">Competencia General</h3>
+
+                    <h2 class="subtitle">
+
+                        <i class="fa-solid fa-user-graduate"></i>
+
+                        Perfil Profesional
+
+                    </h2>
+
+
+                    <h3 class="minititle">
+                        Competencia General
+                    </h3>
+
                     <p class="texto_descripcion">
-                        Movilizar y trasladar usuarios al centro de atención requerido, prestando atención básica en el entorno intra y extra hospitalario y en función de su situación clínica, las circunstancias de atención, los procedimientos establecidos y las tecnologías requeridas; trasladar documentos y materiales de un centro sanitario, órganos embalados, muestras y/o tejidos acorde a los lineamientos y normativa establecida así como colaborar en la ejecución y organización logística de planes de emergencias, de dispositivos de riesgo previsibles, abastecimiento y desarrollo de las labores ante una emergencia individual, colectiva o catástrofe y mantener preventivamente el vehículo controlando la dotación de material necesario para la prestación eficiente del servicio siguiendo indicaciones y bajo la supervisión del profesional correspondiente.
+
+                        Movilizar y trasladar usuarios al centro de atención
+                        requerido, prestando atención básica en el entorno
+                        intra y extrahospitalario según su situación clínica,
+                        las circunstancias de atención, los procedimientos
+                        establecidos y las tecnologías requeridas.
+
                     </p>
-                    
-                    <h3 class="minititle">Competencias Básicas</h3>
+
+
+                    <p class="texto_descripcion">
+
+                        La formación también desarrolla competencias para el
+                        traslado de documentos, materiales sanitarios,
+                        órganos, muestras y tejidos; así como para colaborar
+                        en la organización logística de planes de emergencia,
+                        dispositivos de riesgo y acciones de respuesta ante
+                        emergencias individuales, colectivas o catástrofes.
+
+                    </p>
+
+
+                    <h3 class="minititle">
+                        Competencias Básicas
+                    </h3>
+
+
                     <ul class="lista_competencias">
-                        <li><strong>Comunicación Efectiva:</strong> Establecer comunicación oral y escrita clara y pertinente con usuarios y equipos de trabajo en el ámbito laboral.</li>
-                        <li><strong>Lengua Extranjera:</strong> Comunicación en inglés a nivel básico (A2) para situaciones sociales y profesionales habituales.</li>
-                        <li><strong>Cálculo y Sostenibilidad:</strong> Interpretar información técnica mediante cálculos matemáticos y criterios de sostenibilidad económica y ambiental.</li>
-                        <li><strong>Tecnologías de Información:</strong> Uso eficaz de las TIC para procesar información, comunicarse y registrar datos laborales.</li>
-                        <li><strong>Biología Humana:</strong> Reconocer la estructura y función del cuerpo humano e identificar los cambios en las diferentes etapas de la vida.</li>
+
+                        <li>
+                            <strong>Comunicación efectiva:</strong>
+                            establecer comunicación oral y escrita clara
+                            con usuarios y equipos de trabajo.
+                        </li>
+
+                        <li>
+                            <strong>Lengua extranjera:</strong>
+                            utilizar el inglés básico en situaciones
+                            sociales y profesionales habituales.
+                        </li>
+
+                        <li>
+                            <strong>Cálculo y sostenibilidad:</strong>
+                            interpretar información técnica mediante
+                            operaciones matemáticas y criterios de
+                            sostenibilidad.
+                        </li>
+
+                        <li>
+                            <strong>Tecnologías de la información:</strong>
+                            utilizar las TIC para procesar, comunicar y
+                            registrar información.
+                        </li>
+
+                        <li>
+                            <strong>Biología humana:</strong>
+                            reconocer estructuras y funciones del cuerpo
+                            humano y sus principales cambios.
+                        </li>
+
                     </ul>
+
                 </div>
+
             </div>
+
 
             <hr class="separador">
 
+
             <section class="entorno_laboral">
-                <h2 class="subtitle"><i class="fa-solid fa-briefcase"></i> ENTORNO PROFESIONAL</h2>
+
+                <h2 class="subtitle">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    Entorno Profesional
+
+                </h2>
+
+
                 <div class="grid_info">
+
                     <div class="info_caja">
-                    <h3>Ámbito Profesional</h3>
-                    <p>
-                        Desarrolla su actividad en entornos hospitalarios y extrahospitalarios (públicos o privados), sistemas de atención a emergencias, áreas de desastres y empresas con sistemas de traslado sanitario propio. Requiere licencias de conducir para vehículos de emergencia y está regulado por la administración de salud nacional.
-                    </p>
-                    <p><strong>Sectores:</strong> Salud, seguridad nacional, defensa civil y respuesta a emergencias.</p>
-                </div>
-                    <div class="info_caja">
-                    <h3>Ocupaciones Relevantes</h3>
-                        <ul class="lista_puestos">
-                            <li>Técnico en Emergencias Médicas y Paramédico</li>
-                            <li>Conductor de Ambulancia y Vehículos de Emergencia</li>
-                            <li>Técnico en Transporte Sanitario (Urgente y Programado)</li>
-                            <li>Asistente de Ambulancia y Auxiliar de Avanzada</li>
-                            <li>Auxiliar de Logística en Emergencias y Desastres</li>
-                            <li>Técnico de Ambulancia con Soporte Vital (Básico/Avanzado)</li>
-                        </ul>
+
+                        <h3>
+                            Ámbito Profesional
+                        </h3>
+
+                        <p>
+                            Puede desarrollar su actividad en entornos
+                            hospitalarios y extrahospitalarios, sistemas de
+                            atención a emergencias, áreas de desastres y
+                            organizaciones vinculadas al traslado sanitario
+                            y la respuesta inmediata.
+                        </p>
+
                     </div>
+
+
+                    <div class="info_caja">
+
+                        <h3>
+                            Ocupaciones Relacionadas
+                        </h3>
+
+                        <ul class="lista_puestos">
+
+                            <li>
+                                Técnico en emergencias médicas.
+                            </li>
+
+                            <li>
+                                Personal de transporte sanitario.
+                            </li>
+
+                            <li>
+                                Asistente de ambulancia.
+                            </li>
+
+                            <li>
+                                Auxiliar de logística en emergencias.
+                            </li>
+
+                            <li>
+                                Personal de apoyo en respuesta a desastres.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
                 </div>
-                </div>
+
             </section>
+
         </section>
+
     </main>
 
-  <footer>
-    <p>© CEJOMA – Todos los derechos reservados</p>
-    <p>Diseñado por <span>Edison Clase</span></p>
-  </footer>
 
-  <script>
-    const btnMenu = document.getElementById('btnMenu');
-    const menu = document.getElementById('menu');
+    <footer
+        class="footer-cejoma"
+        role="contentinfo"
+    >
 
-    btnMenu.addEventListener('click', () => {
-        menu.classList.toggle('mostrar');
-    });
-  </script>
+        <div class="footer-contenedor">
+
+            <div class="footer-identidad">
+
+                <img
+                    src="../../img/cejoma_logo.png"
+                    alt="Logo CEJOMA"
+                    class="footer-logo"
+                >
+
+                <div>
+
+                    <h3>
+                        CEJOMA
+                    </h3>
+
+                    <p>
+                        Politécnico Prof. José Mercedes Alvino
+                    </p>
+
+                    <small>
+                        Formando con Amor Seres Justos y Competentes.
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-redes">
+
+                <h4>
+                    Síguenos
+                </h4>
+
+                <div class="footer-redes-iconos">
+
+                    <a
+                        href="https://www.facebook.com/profile.php?id=100009640831152"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook de CEJOMA"
+                    >
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/jose_mercedes_alvino/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram de CEJOMA"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/@politecnicoprofesorjosemer7603"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="YouTube de CEJOMA"
+                    >
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-divider"></div>
+
+
+        <p class="footer-copyright">
+            © 2026 <span>Politécnico Prof. José Mercedes Alvino (CEJOMA)</span>.
+            Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+    <script src="../../home/main.js"></script>
 
 </body>
+
 </html>
+'@ | Set-Content .\programs\atencion_emergencia_salud\index.html -Encoding utf8

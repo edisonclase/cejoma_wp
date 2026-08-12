@@ -1,109 +1,491 @@
+@'
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios de Alojamiento | CEJOMA</title>
-    <meta name="description" content="Perfil profesional y competencias del Bachillerato Técnico en Servicios de Alojamiento en el Politécnico CEJOMA.">
-    <link rel="icon" type="image/png" href="../../img/logo-cejoma.png">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="../../css/global.css">
-    <link rel="stylesheet" href="../../programs/styles.css"> </head>
-<body>
-<header class="encabezado">
-  <div class="marca">
-    <a href="../../index.html"> 
-      <img src="../../img/Logo_cejoma.jpg" alt="Logo de Cejoma">
-    </a>
-    <div class="marca-texto">
-      <h1>Politécnico Profesor José Mercedes Alvino</h1>
-      <h2>CEJOMA</h2>
-      <p>Formando con amor seres justos y competentes.</p>
-    </div>
-  </div> 
-    <nav id="menu">
-      <a href="../index.html">Inicio</a>
-      <a href="../nosotros/index.html">Nosotros</a>
-      <a href="../oferta_academica/index.html">Oferta Académica</a>
-      <a href="../contacto/index.html">Contacto</a>
-      <a class="btn-admision" href="#">Admisión</a>
-    </nav>
-  <div class="menu-toggle" id="btnMenu">☰</div>
-</header>
 
-    <main class="contenedor_programa animar_entrada">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Perfil profesional, competencias y campo laboral del Bachillerato Técnico en Servicios de Alojamiento del Politécnico Prof. José Mercedes Alvino (CEJOMA)."
+    >
+
+    <title>Servicios de Alojamiento | CEJOMA</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../../img/cejoma_logo.png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="../../img/cejoma_logo.png"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../styles.css"
+    >
+</head>
+
+
+<body>
+
+    <a
+        href="#contenido-principal"
+        class="skip-link"
+    >
+        Saltar al contenido principal
+    </a>
+
+
+    <div class="barra_principal">
+
+        <span>
+            <i class="fas fa-phone-alt"></i>
+            (809) 570-6598
+        </span>
+
+        <span>
+            <i class="fas fa-envelope"></i>
+            info@cejoma.edu.do
+        </span>
+
+        <span>
+            <i class="fas fa-map-marker-alt"></i>
+            Santiago, República Dominicana
+        </span>
+
+    </div>
+
+
+    <header
+        class="encabezado"
+        role="banner"
+    >
+
+        <a
+            href="../../index.html"
+            class="marca"
+            aria-label="Inicio - Politécnico Prof. José Mercedes Alvino"
+        >
+
+            <img
+                src="../../img/cejoma_logo.png"
+                alt="Logotipo del Politécnico Prof. José Mercedes Alvino"
+            >
+
+            <div class="marca-texto">
+
+                <h1>
+                    Politécnico Prof. José Mercedes Alvino
+                </h1>
+
+                <h2>
+                    Formando con Amor Seres Justos y Competentes.
+                </h2>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="btn-menu"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            aria-controls="nav-principal"
+        >
+            <i class="fas fa-bars"></i>
+        </button>
+
+
+        <nav
+            id="nav-principal"
+            aria-label="Navegación principal"
+        >
+
+            <a href="../../index.html">
+                Inicio
+            </a>
+
+            <a href="../../nosotros/index.html">
+                Nosotros
+            </a>
+
+            <a
+                href="../../oferta_academica/index.html"
+                aria-current="page"
+            >
+                Oferta Académica
+            </a>
+
+            <a href="../../contacto/index.html">
+                Contacto
+            </a>
+
+
+            <div
+                class="nav-redes"
+                aria-label="Redes sociales de CEJOMA"
+            >
+
+                <a
+                    href="https://www.facebook.com/profile.php?id=100009640831152"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook de CEJOMA"
+                >
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a
+                    href="https://www.instagram.com/jose_mercedes_alvino/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram de CEJOMA"
+                >
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a
+                    href="https://www.youtube.com/@politecnicoprofesorjosemer7603"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube de CEJOMA"
+                >
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main
+        id="contenido-principal"
+        class="contenedor_programa"
+    >
+
         <section class="bloque_programa">
+
             <header class="header_programa">
-                <h1 class="title">Servicios de Alojamiento</h1>
+
+                <span class="programa_badge">
+
+                    <i class="fa-solid fa-hotel"></i>
+
+                    Área Técnica
+
+                </span>
+
+
+                <h1 class="title">
+                    Servicios de Alojamiento
+                </h1>
+
+
                 <div class="linea_decorativa"></div>
+
+
+                <p class="programa_intro">
+                    Formación técnico-profesional orientada a la recepción,
+                    atención al huésped, gestión de reservas y coordinación
+                    de servicios de alojamiento y hospitalidad.
+                </p>
+
             </header>
 
+
             <div class="grid_contenido">
+
                 <div class="columna_imagen">
-                    <img src="../../img/sa_logo.png" alt="Logo de Servicios de Alojamiento" class="img_principal">
-                    <a href="../../documentos_cejoma/2025_06_27_HOYT-03_3-Bachillerato Técnico en Servicios de Alojamiento.pdf" target="_blank" class="btn_pdf">
-                        <i class="fa-solid fa-file-pdf"></i> Descargar Programa Completo (PDF)
+
+                    <img
+                        src="../../img/servicios_de_alojamiento.jpeg"
+                        alt="Área Técnica de Servicios de Alojamiento"
+                        class="img_principal"
+                    >
+
+                    <a
+                        href="../../documentos_cejoma/2025_06_27_HOYT-03_3-Bachillerato%20Te%CC%81cnico%20en%20Servicios%20de%20Alojamiento.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn_pdf"
+                    >
+
+                        <i class="fa-solid fa-file-pdf"></i>
+
+                        Descargar Programa Completo
+
                     </a>
+
                 </div>
+
 
                 <div class="columna_texto">
-                    <h2 class="subtitle"><i class="fa-solid fa-user-graduate"></i> PERFIL PROFESIONAL</h2>
-                    
-                    <h3 class="minititle">Competencia General</h3>
+
+                    <h2 class="subtitle">
+
+                        <i class="fa-solid fa-user-graduate"></i>
+
+                        Perfil Profesional
+
+                    </h2>
+
+
+                    <h3 class="minititle">
+                        Competencia General
+                    </h3>
+
+
                     <p class="texto_descripcion">
-                        Coordinar el recibimiento, acomodación, manejo de equipaje y despedida del cliente, brindando asistencia e información sobre el entorno, el alojamiento y los servicios disponibles, asegurando el cumplimiento de los protocolos establecidos y la normativa legal vigente.
+
+                        Coordinar el recibimiento, acomodación, manejo de
+                        equipaje y despedida del cliente, brindando asistencia
+                        e información sobre el entorno, el alojamiento y los
+                        servicios disponibles, asegurando el cumplimiento de
+                        los protocolos establecidos y la normativa vigente.
+
                     </p>
 
-                    <h3 class="minititle">Competencias Básicas</h3>
+
+                    <h3 class="minititle">
+                        Competencias Básicas
+                    </h3>
+
+
                     <ul class="lista_competencias">
-                        <li><strong>Comunicación:</strong> Establecer comunicación oral y escrita de forma clara y efectiva en el ámbito laboral.</li>
-                        <li><strong>Resolución de Problemas:</strong> Aplicar operaciones matemáticas y proporcionalidad numérica (porcentajes, regla de tres).</li>
-                        <li><strong>Tecnología:</strong> Manejo de TIC para procesar información y registrar datos relacionados al trabajo.</li>
+
+                        <li>
+                            <strong>Comunicación:</strong>
+                            establecer comunicación oral y escrita clara y
+                            efectiva en el ámbito laboral.
+                        </li>
+
+                        <li>
+                            <strong>Resolución de problemas:</strong>
+                            aplicar operaciones matemáticas y proporcionalidad
+                            en situaciones relacionadas con el servicio.
+                        </li>
+
+                        <li>
+                            <strong>Tecnología:</strong>
+                            utilizar herramientas TIC para procesar información,
+                            administrar reservas y registrar datos.
+                        </li>
+
+                        <li>
+                            <strong>Servicio al cliente:</strong>
+                            ofrecer atención respetuosa, organizada y orientada
+                            a la satisfacción del huésped.
+                        </li>
+
                     </ul>
+
                 </div>
+
             </div>
+
 
             <hr class="separador">
 
+
             <section class="entorno_laboral">
-                <h2 class="subtitle"><i class="fa-solid fa-briefcase"></i> ENTORNO PROFESIONAL</h2>
+
+                <h2 class="subtitle">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    Entorno Profesional
+
+                </h2>
+
+
                 <div class="grid_info">
+
                     <div class="info_caja">
-                        <h3>Ámbito Profesional</h3>
-                        <p>Hoteles, resorts, alojamientos alternativos (Airbnb), cruceros, centros de convenciones y condominios turísticos.</p>
+
+                        <h3>
+                            Ámbito Profesional
+                        </h3>
+
+                        <p>
+                            Hoteles, resorts, alojamientos turísticos,
+                            complejos vacacionales, cruceros, centros de
+                            convenciones y otras organizaciones relacionadas
+                            con la hospitalidad y el turismo.
+                        </p>
+
                     </div>
+
+
                     <div class="info_caja">
-                        <h3>Ocupaciones Relevantes</h3>
+
+                        <h3>
+                            Ocupaciones Relacionadas
+                        </h3>
+
                         <ul class="lista_puestos">
-                            <li>Recepcionista de Hotel / Agente de Reservas</li>
-                            <li>Concierge y Servicio al Cliente</li>
-                            <li>Supervisor de Mantenimiento y Limpieza</li>
-                            <li>Encargado de Lavandería y Ropería</li>
+
+                            <li>
+                                Recepcionista de hotel.
+                            </li>
+
+                            <li>
+                                Agente de reservas.
+                            </li>
+
+                            <li>
+                                Concierge.
+                            </li>
+
+                            <li>
+                                Personal de servicio al cliente.
+                            </li>
+
+                            <li>
+                                Personal de apoyo en operaciones de alojamiento.
+                            </li>
+
                         </ul>
+
                     </div>
+
                 </div>
+
             </section>
+
         </section>
+
     </main>
 
-  <footer>
-    <p>© CEJOMA – Todos los derechos reservados</p>
-    <p>Diseñado por <span>Edison Clase</span></p>
-  </footer>
 
-  <script>
-    const btnMenu = document.getElementById('btnMenu');
-    const menu = document.getElementById('menu');
+    <footer
+        class="footer-cejoma"
+        role="contentinfo"
+    >
 
-    btnMenu.addEventListener('click', () => {
-    menu.classList.toggle('mostrar');
-    });
-  </script>
+        <div class="footer-contenedor">
 
-    </body>
+            <div class="footer-identidad">
+
+                <img
+                    src="../../img/cejoma_logo.png"
+                    alt="Logo CEJOMA"
+                    class="footer-logo"
+                >
+
+                <div>
+
+                    <h3>
+                        CEJOMA
+                    </h3>
+
+                    <p>
+                        Politécnico Prof. José Mercedes Alvino
+                    </p>
+
+                    <small>
+                        Formando con Amor Seres Justos y Competentes.
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-redes">
+
+                <h4>
+                    Síguenos
+                </h4>
+
+                <div class="footer-redes-iconos">
+
+                    <a
+                        href="https://www.facebook.com/profile.php?id=100009640831152"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook de CEJOMA"
+                    >
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/jose_mercedes_alvino/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram de CEJOMA"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/@politecnicoprofesorjosemer7603"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="YouTube de CEJOMA"
+                    >
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-divider"></div>
+
+
+        <p class="footer-copyright">
+            © 2026 <span>Politécnico Prof. José Mercedes Alvino (CEJOMA)</span>.
+            Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+    <script src="../../home/main.js"></script>
+
+</body>
 
 </html>
+'@ | Set-Content .\programs\servicios_alojamiento\index.html -Encoding utf8
