@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Noticias, actividades y comunicados del Politécnico Prof. José Mercedes Alvino (CEJOMA)."
+  >
+
+  <title>CEJOMA | Noticias</title>
+
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="../img/cejoma_logo.png"
+  >
+
+
+  <link
+    rel="apple-touch-icon"
+    href="../img/cejoma_logo.png"
+  >
+
+
+  <!-- Bootstrap -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  >
+
+
+  <!-- Estilos globales -->
+  <link
+    rel="stylesheet"
+    href="../css/global.css"
+  >
+
+
+  <!-- Estilos de noticias -->
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
+
+</head>
+
+
+<body>
+
+  <a
+    href="#contenido-principal"
+    class="skip-link"
+  >
+    Saltar al contenido principal
+  </a>
+
+
+  <!-- =========================================
+       BARRA SUPERIOR
+  ========================================== -->
+
+  <div class="barra_principal">
+
+    <span>
+
+      <i class="fas fa-phone-alt"></i>
+
+      (809) 570-6598
+
+    </span>
+
+
+    <span>
+
+      <i class="fas fa-envelope"></i>
+
+      info@cejoma.edu.do
+
+    </span>
+
+
+    <span>
+
+      <i class="fas fa-map-marker-alt"></i>
+
+      Santiago, República Dominicana
+
+    </span>
+
+  </div>
+
+
+  <!-- =========================================
+       ENCABEZADO
+  ========================================== -->
+
+  <header
+    class="encabezado"
+    role="banner"
+  >
+
+    <a
+      href="../index.html"
+      class="marca"
+      aria-label="Inicio - Politécnico Prof. José Mercedes Alvino"
+    >
+
+      <img
+        src="../img/cejoma_logo.png"
+        alt="Logotipo Politécnico Prof. José Mercedes Alvino"
+      >
+
+
+      <div class="marca-texto">
+
+        <h1>
+          Politécnico Prof. José Mercedes Alvino
+        </h1>
+
+        <h2>
+          Formando con Amor Seres Justos y Competentes.
+        </h2>
+
+      </div>
+
+    </a>
+
+
+    <button
+      class="menu-toggle"
+      id="btn-menu"
+      aria-label="Abrir menú de navegación"
+      aria-expanded="false"
+      aria-controls="nav-principal"
+    >
+
+      <i class="fas fa-bars"></i>
+
+    </button>
+
+
+    <nav
+      id="nav-principal"
+      aria-label="Navegación principal"
+    >
+
+      <a href="../index.html">
+        Inicio
+      </a>
+
+
+      <a href="../nosotros/index.html">
+        Nosotros
+      </a>
+
+
+      <a href="../oferta_academica/index.html">
+        Oferta Académica
+      </a>
+
+
+      <a href="../contacto/index.html">
+        Contacto
+      </a>
+
+
+      <div
+        class="nav-redes"
+        aria-label="Redes sociales de CEJOMA"
+      >
+
+        <a
+          href="https://www.facebook.com/profile.php?id=100009640831152"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook de CEJOMA"
+        >
+
+          <i class="fab fa-facebook-f"></i>
+
+        </a>
+
+
+        <a
+          href="https://www.instagram.com/jose_mercedes_alvino/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram de CEJOMA"
+        >
+
+          <i class="fab fa-instagram"></i>
+
+        </a>
+
+
+        <a
+          href="https://www.youtube.com/@politecnicoprofesorjosemer7603"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube de CEJOMA"
+        >
+
+          <i class="fab fa-youtube"></i>
+
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =========================================
+       CONTENIDO
+  ========================================== -->
+
+  <main id="contenido-principal">
+
+
+    <!-- =======================================
+         HERO DE NOTICIAS
+    ======================================== -->
+
+    <section class="noticias-hero">
+
+      <div class="container">
+
+        <span class="noticias-kicker">
+          Actualidad CEJOMA
+        </span>
+
+
+        <h2>
+          Noticias
+        </h2>
+
+
+        <p>
+          Actividades, informaciones y acontecimientos
+          de nuestra comunidad educativa.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================
+         ARCHIVO
+    ======================================== -->
+
+    <section
+      class="archivo-noticias"
+      aria-label="Archivo de noticias de CEJOMA"
+    >
+
+      <div class="container">
+
+
+        <div class="archivo-cabecera">
+
+          <div>
+
+            <span class="archivo-etiqueta">
+              Archivo institucional
+            </span>
+
+            <h3>
+              Todas las noticias
+            </h3>
+
+          </div>
+
+
+          <div class="archivo-buscador">
+
+            <i class="fas fa-search"></i>
+
+            <input
+              type="search"
+              id="buscar-noticias"
+              placeholder="Buscar noticias..."
+              aria-label="Buscar noticias"
+              autocomplete="off"
+            >
+
+          </div>
+
+        </div>
+
+
+        <div
+          id="filtros-noticias"
+          class="filtros-noticias"
+          aria-label="Filtrar noticias por categoría"
+        ></div>
+
+
+        <div
+          id="lista-noticias"
+          class="lista-noticias"
+        ></div>
+
+
+        <div
+          id="sin-resultados"
+          class="sin-resultados"
+          hidden
+        >
+
+          <i class="far fa-newspaper"></i>
+
+          <h4>
+            No encontramos noticias
+          </h4>
+
+          <p>
+            Prueba con otra palabra o categoría.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer
+    class="footer-cejoma"
+    role="contentinfo"
+  >
+
+    <div class="footer-contenedor">
+
+      <div class="footer-identidad">
+
+        <img
+          src="../img/cejoma_logo.png"
+          alt="Logo CEJOMA"
+          class="footer-logo"
+        >
+
+
+        <div>
+
+          <h3>
+            CEJOMA
+          </h3>
+
+          <p>
+            Politécnico Prof. José Mercedes Alvino
+          </p>
+
+          <small>
+            Formando con Amor Seres Justos y Competentes.
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-redes">
+
+        <h4>
+          Síguenos
+        </h4>
+
+
+        <div class="footer-redes-iconos">
+
+          <a
+            href="https://www.facebook.com/profile.php?id=100009640831152"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook de CEJOMA"
+          >
+
+            <i class="fab fa-facebook-f"></i>
+
+          </a>
+
+
+          <a
+            href="https://www.instagram.com/jose_mercedes_alvino/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de CEJOMA"
+          >
+
+            <i class="fab fa-instagram"></i>
+
+          </a>
+
+
+          <a
+            href="https://www.youtube.com/@politecnicoprofesorjosemer7603"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube de CEJOMA"
+          >
+
+            <i class="fab fa-youtube"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-divider"></div>
+
+
+    <p class="footer-copyright">
+
+      © 2026
+
+      <span>
+        Politécnico Prof. José Mercedes Alvino (CEJOMA)
+      </span>.
+
+      Todos los derechos reservados.
+
+    </p>
+
+  </footer>
+
+
+  <!-- Datos centrales -->
+  <script src="../data/noticias.js"></script>
+
+
+  <!-- Aplicación del archivo de noticias -->
+  <script src="app.js"></script>
+
+
+  <!-- Navegación global -->
+  <script src="../home/main.js"></script>
+
+</body>
+
+</html>

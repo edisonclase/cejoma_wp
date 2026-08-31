@@ -1142,3 +1142,689 @@ nav > a[aria-current="page"] {
   }
 
 }
+
+/* CEJOMA - SISTEMA DE NOTICIAS 2026 */
+
+/* =========================================
+   SISTEMA DE NOTICIAS
+========================================= */
+
+.noticias-introduccion {
+  max-width: 720px;
+}
+
+
+/* Tarjetas */
+
+.noticia-card {
+  border-radius: 18px !important;
+
+  border-color: #e3ebe6 !important;
+
+  scroll-margin-top: 120px;
+}
+
+
+/* Noticia principal */
+
+.noticias-container > .col-12 .noticia-card {
+  max-width: 100%;
+}
+
+
+.noticias-container > .col-12 .noticia-imagen {
+  height: 430px;
+
+  object-position: center;
+}
+
+
+/* Contenido desplegable */
+
+.noticia-contenido-completo {
+  margin-top: 8px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #e5ebe7;
+}
+
+
+.noticia-contenido-completo p {
+  margin-bottom: 18px;
+
+  line-height: 1.8;
+}
+
+
+/* Segunda fotografía */
+
+.noticia-imagen-secundaria {
+  display: block;
+
+  width: 100%;
+
+  max-height: 520px;
+
+  margin: 0 0 25px;
+
+  border-radius: 14px;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  box-shadow:
+    0 8px 24px rgba(11, 61, 36, 0.12);
+}
+
+
+/* Acciones */
+
+.noticia-acciones {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+.noticia-acciones .btn {
+  border-radius: 50px;
+
+  padding: 9px 18px;
+
+  font-weight: 600;
+}
+
+
+.noticia-acciones .btn-success {
+  background-color: var(--verde-base);
+
+  border-color: var(--verde-base);
+}
+
+
+.noticia-acciones .btn-success:hover {
+  background-color: var(--verde-oscuro);
+
+  border-color: var(--verde-oscuro);
+}
+
+
+.noticia-acciones .btn-outline-success {
+  color: var(--verde-base);
+
+  border-color: var(--verde-base);
+}
+
+
+.noticia-acciones .btn-outline-success:hover {
+  background-color: var(--verde-base);
+
+  border-color: var(--verde-base);
+
+  color: var(--blanco);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+  .noticias-container > .col-12 .noticia-imagen {
+    height: 350px;
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 768px) {
+
+  .noticias-container > .col-12 .noticia-imagen {
+    height: 260px;
+  }
+
+
+  .noticia-imagen-secundaria {
+    max-height: 360px;
+
+    border-radius: 10px;
+  }
+
+
+  .noticia-acciones {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .noticia-acciones .btn {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   MÓVILES PEQUEÑOS
+========================================= */
+
+@media (max-width: 480px) {
+
+  .noticias-container > .col-12 .noticia-imagen {
+    height: 220px;
+  }
+
+
+  .noticia-card > .p-4 {
+    padding: 20px !important;
+  }
+
+
+  .noticia-contenido-completo p {
+    line-height: 1.72;
+  }
+
+}
+
+/* Ajuste de encuadre:
+   noticia de apertura del año escolar */
+#apertura-ano-escolar-2026-2027 .noticia-imagen {
+  object-position: center 10%;
+}
+
+/* =========================================
+   FOTO DOCUMENTAL DENTRO DE NOTICIAS
+========================================= */
+
+.noticia-foto-documental {
+  width: 260px;
+  max-width: 100%;
+
+  margin: 10px 25px 18px 0;
+
+  float: left;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e8e3;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 6px 18px rgba(11, 61, 36, 0.10);
+}
+
+
+.noticia-foto-documental img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+.noticia-foto-documental figcaption {
+  padding: 11px 13px 13px;
+
+  text-align: center;
+
+  line-height: 1.35;
+
+  background: #ffffff;
+}
+
+
+.noticia-foto-documental figcaption strong {
+  display: block;
+
+  color: var(--verde-oscuro);
+
+  font-size: 0.88rem;
+
+  font-weight: 700;
+}
+
+
+.noticia-foto-documental figcaption span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #68736c;
+
+  font-size: 0.76rem;
+}
+
+
+/*
+   Permite que el texto continúe correctamente
+   después de la fotografía flotante.
+*/
+
+.noticia-contenido-completo::after {
+  content: "";
+
+  display: block;
+
+  clear: both;
+}
+
+
+/* =========================================
+   FOTO DOCUMENTAL EN MÓVIL
+========================================= */
+
+@media (max-width: 600px) {
+
+  .noticia-foto-documental {
+    float: none;
+
+    width: min(280px, 100%);
+
+    margin:
+      10px auto
+      22px;
+  }
+
+}
+
+/* =====================================================
+   CEJOMA - SISTEMA MODERNO DE NOTICIAS
+   ===================================================== */
+
+
+/* -----------------------------------------------------
+   Introducción de noticias
+   ----------------------------------------------------- */
+
+.noticias-introduccion {
+  max-width: 680px;
+}
+
+
+/* -----------------------------------------------------
+   Tarjeta base
+   ----------------------------------------------------- */
+
+.noticia-card {
+  background: var(--blanco);
+
+  border-color: #e4ebe6 !important;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.noticia-card:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(31, 143, 74, 0.25) !important;
+
+  box-shadow:
+    0 16px 40px
+    rgba(11, 61, 36, 0.11) !important;
+}
+
+
+/* -----------------------------------------------------
+   Noticia principal / destacada
+   ----------------------------------------------------- */
+
+.noticia-card-destacada {
+  max-width: 100%;
+}
+
+
+.noticia-card-destacada .noticia-imagen {
+  height: 420px;
+}
+
+
+/* -----------------------------------------------------
+   Noticias recientes secundarias
+   ----------------------------------------------------- */
+
+.noticia-card-reciente {
+  margin-top: 10px;
+}
+
+
+.noticia-card-reciente .noticia-imagen {
+  height: 330px;
+}
+
+
+/* -----------------------------------------------------
+   Imagen general de las noticias
+   ----------------------------------------------------- */
+
+.noticia-imagen {
+  display: block;
+
+  width: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  background-color: var(--gris-suave);
+}
+
+
+/* -----------------------------------------------------
+   ENCUADRE ESPECÍFICO:
+   Apertura del Año Escolar 2026-2027
+   ----------------------------------------------------- */
+
+#apertura-ano-escolar-2026-2027
+.noticia-imagen {
+
+  object-position: center 10%;
+
+}
+
+
+/* -----------------------------------------------------
+   ENCUADRE ESPECÍFICO:
+   Richard Báez - Jornada de Verano Distrito 08-03
+
+   La fotografía es vertical y necesitamos priorizar
+   el rostro en lugar del centro geométrico de la foto.
+   ----------------------------------------------------- */
+
+#capacitacion-equipo-gestion-distrito-0803-2026
+.noticia-imagen {
+
+  object-position: center top;
+
+}
+
+
+/* -----------------------------------------------------
+   Contenido completo de las noticias
+   ----------------------------------------------------- */
+
+.noticia-contenido-completo {
+  margin-top: 8px;
+}
+
+
+.noticia-contenido-completo p {
+  margin-bottom: 1rem;
+
+  line-height: 1.75;
+}
+
+
+.noticia-contenido-completo::after {
+  content: "";
+
+  display: block;
+
+  clear: both;
+}
+
+
+/* -----------------------------------------------------
+   Fotografía documental dentro del texto
+
+   Utilizada actualmente para la fotografía del
+   diácono Basilio González.
+   ----------------------------------------------------- */
+
+.noticia-foto-documental {
+  width: 260px;
+
+  max-width: 100%;
+
+  margin:
+    6px
+    25px
+    18px
+    0;
+
+  float: left;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e1e8e3;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 6px 18px
+    rgba(11, 61, 36, 0.10);
+}
+
+
+.noticia-foto-documental img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+.noticia-foto-documental figcaption {
+  padding:
+    11px
+    13px
+    13px;
+
+  text-align: center;
+
+  line-height: 1.35;
+
+  background: #ffffff;
+}
+
+
+.noticia-foto-documental
+figcaption strong {
+
+  display: block;
+
+  color: var(--verde-oscuro);
+
+  font-size: 0.88rem;
+
+  font-weight: 700;
+
+}
+
+
+.noticia-foto-documental
+figcaption span {
+
+  display: block;
+
+  margin-top: 3px;
+
+  color: #68736c;
+
+  font-size: 0.76rem;
+
+}
+
+
+/* -----------------------------------------------------
+   Botones de cada noticia
+   ----------------------------------------------------- */
+
+.noticia-acciones {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  align-items: center;
+}
+
+
+.noticia-acciones .btn {
+  border-radius: 50px;
+
+  font-weight: 600;
+
+  padding:
+    9px
+    18px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+.noticia-acciones .btn:hover {
+  transform: translateY(-1px);
+}
+
+
+/* -----------------------------------------------------
+   Botón "Ver todas las noticias"
+   ----------------------------------------------------- */
+
+.noticias-ver-todas {
+  border-radius: 50px;
+
+  font-weight: 600;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.noticias-ver-todas:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 22px
+    rgba(31, 143, 74, 0.16);
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 992px) {
+
+  .noticia-card-destacada
+  .noticia-imagen {
+
+    height: 360px;
+
+  }
+
+
+  .noticia-card-reciente
+  .noticia-imagen {
+
+    height: 300px;
+
+  }
+
+}
+
+
+/* =====================================================
+   MÓVIL
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  .noticia-card-destacada
+  .noticia-imagen,
+
+  .noticia-card-reciente
+  .noticia-imagen {
+
+    height: 250px;
+
+  }
+
+
+  .noticia-foto-documental {
+    float: none;
+
+    width: min(
+      280px,
+      100%
+    );
+
+    margin:
+      10px
+      auto
+      22px;
+  }
+
+
+  .noticia-acciones {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .noticia-acciones .btn {
+    width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   MÓVILES PEQUEÑOS
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+  .noticia-card-destacada
+  .noticia-imagen,
+
+  .noticia-card-reciente
+  .noticia-imagen {
+
+    height: 220px;
+
+  }
+
+
+  .noticia-card .p-4 {
+    padding: 1.25rem !important;
+  }
+
+}

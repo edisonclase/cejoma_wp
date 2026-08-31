@@ -15,18 +15,29 @@ function BarraSuperior() {
     <div className="barra_principal">
 
       <span>
+
         <i className="fas fa-phone-alt"></i>
+
         (809) 570-6598
+
       </span>
 
+
       <span>
+
         <i className="fas fa-envelope"></i>
+
         info@cejoma.edu.do
+
       </span>
 
+
       <span>
+
         <i className="fas fa-map-marker-alt"></i>
+
         Santiago, República Dominicana
+
       </span>
 
     </div>
@@ -42,52 +53,66 @@ function BarraSuperior() {
 
 function Navegacion() {
 
-  const [menuAbierto, setMenuAbierto] = React.useState(false);
+  const [menuAbierto, setMenuAbierto] =
+    React.useState(false);
 
 
   const toggleMenu = () => {
 
-    setMenuAbierto(!menuAbierto);
+    setMenuAbierto(
+      !menuAbierto
+    );
 
   };
 
 
   const cerrarMenu = () => {
 
-    setMenuAbierto(false);
+    setMenuAbierto(
+      false
+    );
 
   };
 
 
-  React.useEffect(() => {
+  React.useEffect(
+    () => {
 
-    const manejarEscape = (event) => {
+      const manejarEscape =
+        (event) => {
 
-      if (event.key === "Escape") {
+          if (
+            event.key ===
+            "Escape"
+          ) {
 
-        setMenuAbierto(false);
+            setMenuAbierto(
+              false
+            );
 
-      }
+          }
 
-    };
-
-
-    document.addEventListener(
-      "keydown",
-      manejarEscape
-    );
+        };
 
 
-    return () => {
-
-      document.removeEventListener(
+      document.addEventListener(
         "keydown",
         manejarEscape
       );
 
-    };
 
-  }, []);
+      return () => {
+
+        document.removeEventListener(
+          "keydown",
+          manejarEscape
+        );
+
+      };
+
+    },
+    []
+  );
 
 
   return (
@@ -107,6 +132,7 @@ function Navegacion() {
           src="img/cejoma_logo.png"
           alt="Logotipo Politécnico Prof. José Mercedes Alvino"
         />
+
 
         <div className="marca-texto">
 
@@ -131,7 +157,9 @@ function Navegacion() {
             ? "Cerrar menú de navegación"
             : "Abrir menú de navegación"
         }
-        aria-expanded={menuAbierto}
+        aria-expanded={
+          menuAbierto
+        }
         aria-controls="nav-principal"
       >
 
@@ -223,7 +251,9 @@ function Navegacion() {
             aria-label="Facebook de CEJOMA"
             title="Facebook de CEJOMA"
           >
+
             <i className="fab fa-facebook-f"></i>
+
           </a>
 
 
@@ -234,7 +264,9 @@ function Navegacion() {
             aria-label="Instagram de CEJOMA"
             title="Instagram de CEJOMA"
           >
+
             <i className="fab fa-instagram"></i>
+
           </a>
 
 
@@ -245,7 +277,9 @@ function Navegacion() {
             aria-label="Canal de YouTube de CEJOMA"
             title="YouTube de CEJOMA"
           >
+
             <i className="fab fa-youtube"></i>
+
           </a>
 
         </div>
@@ -366,10 +400,332 @@ function Hero() {
 
 
 // -----------------------------------------------------
-// Noticias
+// Datos de Noticias
+// -----------------------------------------------------
+
+const noticias =
+  window.CEJOMA_NOTICIAS || [];
+
+
+// -----------------------------------------------------
+// Compartir Noticia
+// -----------------------------------------------------
+
+function compartirNoticia(
+  noticia
+) {
+
+  const url =
+    `${window.location.origin}/noticias/index.html#${noticia.id}`;
+
+
+  const datosCompartir = {
+
+    title:
+      noticia.titulo,
+
+    text:
+      `${noticia.titulo} - CEJOMA`,
+
+    url:
+      url
+
+  };
+
+
+  if (
+    navigator.share
+  ) {
+
+    navigator
+      .share(
+        datosCompartir
+      )
+      .catch(
+        (error) => {
+
+          if (
+            error.name !==
+            "AbortError"
+          ) {
+
+            console.error(
+              "No fue posible compartir la noticia:",
+              error
+            );
+
+          }
+
+        }
+      );
+
+
+    return;
+
+  }
+
+
+  const textoWhatsApp =
+    encodeURIComponent(
+      `${noticia.titulo}\n\n${noticia.resumen}\n\n${url}`
+    );
+
+
+  window.open(
+    `https://wa.me/?text=${textoWhatsApp}`,
+    "_blank",
+    "noopener,noreferrer"
+  );
+
+}
+
+
+// -----------------------------------------------------
+// Tarjeta de Noticia
+// -----------------------------------------------------
+
+function NoticiaCard({
+  noticia,
+  destacada = false
+}) {
+
+  const [abierta, setAbierta] =
+    React.useState(false);
+
+
+  return (
+
+    <div
+      className={
+        destacada
+          ? "col-12"
+          : "col-12 col-lg-8 mx-auto"
+      }
+    >
+
+      <article
+        id={noticia.id}
+        className={`
+          noticia-card
+          ${
+            destacada
+              ? "noticia-card-destacada"
+              : "noticia-card-reciente"
+          }
+          h-100
+          border
+          rounded
+          shadow-sm
+          overflow-hidden
+          d-flex
+          flex-column
+        `}
+      >
+
+        <img
+          src={noticia.imagen}
+          alt={noticia.altImagen}
+          className="noticia-imagen"
+          loading="lazy"
+        />
+
+
+        <div className="p-4 d-flex flex-column flex-grow-1">
+
+          <div className="text-muted small mb-2">
+
+            <i className="far fa-calendar-alt me-1"></i>
+
+            {noticia.fecha}
+
+            <span aria-hidden="true">
+              {" · "}
+            </span>
+
+            {noticia.categoria}
+
+          </div>
+
+
+          <h3 className="h4 fw-bold text-success mb-3">
+
+            {noticia.titulo}
+
+          </h3>
+
+
+          <p className="text-secondary">
+
+            {noticia.resumen}
+
+          </p>
+
+
+          {abierta && (
+
+            <div className="noticia-contenido-completo">
+
+              {noticia.imagenSecundaria && (
+
+                <figure className="noticia-foto-documental">
+
+                  <img
+                    src={noticia.imagenSecundaria}
+                    alt={
+                      noticia.altImagenSecundaria ||
+                      "Fotografía documental de la actividad"
+                    }
+                    loading="lazy"
+                  />
+
+
+                  {noticia.pieImagenSecundaria && (
+
+                    <figcaption>
+
+                      <strong>
+                        {
+                          noticia
+                            .pieImagenSecundaria
+                            .nombre
+                        }
+                      </strong>
+
+                      <span>
+                        {
+                          noticia
+                            .pieImagenSecundaria
+                            .descripcion
+                        }
+                      </span>
+
+                    </figcaption>
+
+                  )}
+
+                </figure>
+
+              )}
+
+
+              {noticia.contenido.map(
+                (
+                  parrafo,
+                  indice
+                ) => (
+
+                  <p
+                    key={indice}
+                    className="text-secondary"
+                  >
+
+                    {parrafo}
+
+                  </p>
+
+                )
+              )}
+
+            </div>
+
+          )}
+
+
+          <div className="noticia-acciones mt-auto pt-3">
+
+            <button
+              type="button"
+              className="btn btn-outline-success"
+              onClick={
+                () =>
+                  setAbierta(
+                    !abierta
+                  )
+              }
+              aria-expanded={
+                abierta
+              }
+            >
+
+              <i
+                className={
+                  abierta
+                    ? "fas fa-chevron-up me-2"
+                    : "fas fa-book-open me-2"
+                }
+              ></i>
+
+              {
+                abierta
+                  ? "Cerrar noticia"
+                  : "Leer noticia"
+              }
+
+            </button>
+
+
+            <button
+              type="button"
+              className="btn btn-success"
+              onClick={
+                () =>
+                  compartirNoticia(
+                    noticia
+                  )
+              }
+            >
+
+              <i className="fas fa-share-alt me-2"></i>
+
+              Compartir
+
+            </button>
+
+          </div>
+
+
+          <div className="mt-3 pt-3 border-top">
+
+            <span
+              className={
+                `badge ${noticia.claseEstado}`
+              }
+            >
+
+              {noticia.estado}
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  );
+
+}
+
+
+// -----------------------------------------------------
+// Sección de Noticias
 // -----------------------------------------------------
 
 function Noticias() {
+
+  /*
+   * La portada muestra únicamente
+   * las dos noticias más recientes.
+   */
+
+  const noticiasPortada =
+    noticias.slice(
+      0,
+      2
+    );
+
 
   return (
 
@@ -392,161 +748,51 @@ function Noticias() {
 
           </h2>
 
+
+          <p className="text-secondary mt-3 mx-auto noticias-introduccion">
+
+            Conoce las principales actividades, informaciones y acontecimientos
+            de nuestra comunidad educativa.
+
+          </p>
+
         </div>
 
 
         <div className="noticias-container row g-4">
 
+          {noticiasPortada.map(
+            (
+              noticia,
+              indice
+            ) => (
 
-          {/* Noticia 1 */}
-
-          <div className="col-md-6">
-
-            <article
-              className="
-                noticia-card
-                h-100
-                border
-                rounded
-                shadow-sm
-                overflow-hidden
-                d-flex
-                flex-column
-              "
-            >
-
-              <img
-                src="img/oficina.png"
-                alt="Oficina de registro y gestión académica"
-                className="noticia-imagen"
+              <NoticiaCard
+                key={noticia.id}
+                noticia={noticia}
+                destacada={
+                  indice === 0
+                }
               />
 
+            )
+          )}
 
-              <div className="p-4 d-flex flex-column flex-grow-1">
-
-                <div className="text-muted small mb-2">
-
-                  <i className="far fa-calendar-alt me-1"></i>
-
-                  Comunicado de Dirección y Registro
-
-                </div>
+        </div>
 
 
-                <h3 className="h4 fw-bold text-success mb-3">
+        <div className="text-center mt-5">
 
-                  Conclusión del Proceso de Admisión para
-                  Nuevo Ingreso (2.º, 3.º y 4.º Grado)
+          <a
+            href="noticias/index.html"
+            className="btn btn-outline-success btn-lg px-4 noticias-ver-todas"
+          >
 
-                </h3>
+            <i className="far fa-newspaper me-2"></i>
 
+            Ver todas las noticias
 
-                <p className="text-secondary flex-grow-1">
-
-                  Informamos a toda la comunidad educativa y a las
-                  familias postulantes que ha concluido satisfactoriamente
-                  el proceso de registro, evaluación, entrevistas y asignación
-                  de cupos para los estudiantes de nuevo ingreso correspondientes
-                  a 2.º, 3.º y 4.º grado de secundaria.
-
-                  Agradecemos la alta acogida y la confianza depositada
-                  en nuestro centro educativo.
-
-                </p>
-
-
-                <div className="mt-3 pt-3 border-top">
-
-                  <span className="badge bg-secondary">
-
-                    Admisiones Finalizadas
-
-                  </span>
-
-                </div>
-
-              </div>
-
-            </article>
-
-          </div>
-
-
-          {/* Noticia 2 */}
-
-          <div className="col-md-6">
-
-            <article
-              className="
-                noticia-card
-                h-100
-                border
-                rounded
-                shadow-sm
-                overflow-hidden
-                d-flex
-                flex-column
-              "
-            >
-
-              <img
-                src="img/aula.png"
-                alt="Aula preparada para la jornada de capacitación docente"
-                className="noticia-imagen"
-              />
-
-
-              <div className="p-4 d-flex flex-column flex-grow-1">
-
-                <div className="text-muted small mb-2">
-
-                  <i className="far fa-calendar-alt me-1"></i>
-
-                  Gestión Pedagógica
-
-                </div>
-
-
-                <h3 className="h4 fw-bold text-success mb-3">
-
-                  Reintegración y Capacitación del Cuerpo
-                  Docente tras el Período Vacacional
-
-                </h3>
-
-
-                <p className="text-secondary flex-grow-1">
-
-                  Con gran entusiasmo y compromiso, nuestro equipo
-                  de profesores se reincorpora a las instalaciones
-                  del politécnico tras sus merecidas vacaciones.
-
-                  Actualmente nos encontramos inmersos en la jornada
-                  de verano correspondiente al año escolar 2026 - 2027.
-                  Además, estamos preparando todo lo relacionado con el inicio
-                  del nuevo año escolar, incluyendo la planificación de clases,
-                  la actualización de contenidos y la implementación de nuevas
-                  estrategias pedagógicas para garantizar una educación
-                  de calidad.
-
-                </p>
-
-
-                <div className="mt-3 pt-3 border-top">
-
-                  <span className="badge bg-success">
-
-                    Equipo Docente Activo
-
-                  </span>
-
-                </div>
-
-              </div>
-
-            </article>
-
-          </div>
+          </a>
 
         </div>
 
@@ -575,7 +821,6 @@ function PiePagina() {
       <div className="container">
 
         <div className="footer-contenido">
-
 
           <div className="footer-identidad">
 
@@ -621,7 +866,9 @@ function PiePagina() {
                 aria-label="Facebook de CEJOMA"
                 title="Facebook de CEJOMA"
               >
+
                 <i className="fab fa-facebook-f"></i>
+
               </a>
 
 
@@ -632,7 +879,9 @@ function PiePagina() {
                 aria-label="Instagram de CEJOMA"
                 title="Instagram de CEJOMA"
               >
+
                 <i className="fab fa-instagram"></i>
+
               </a>
 
 
@@ -643,7 +892,9 @@ function PiePagina() {
                 aria-label="Canal de YouTube de CEJOMA"
                 title="YouTube de CEJOMA"
               >
+
                 <i className="fab fa-youtube"></i>
+
               </a>
 
             </div>
@@ -657,9 +908,15 @@ function PiePagina() {
 
 
         <p className="footer-copyright">
+
           © 2026{" "}
-          <span>Politécnico Prof. José Mercedes Alvino (CEJOMA)</span>.
+
+          <span>
+            Politécnico Prof. José Mercedes Alvino (CEJOMA)
+          </span>.
+
           {" "}Todos los derechos reservados.
+
         </p>
 
       </div>
@@ -709,14 +966,21 @@ function App() {
 // -----------------------------------------------------
 
 const container =
-  document.getElementById("react-root");
+  document.getElementById(
+    "react-root"
+  );
 
 
 if (container) {
 
   const root =
-    ReactDOM.createRoot(container);
+    ReactDOM.createRoot(
+      container
+    );
 
-  root.render(<App />);
+
+  root.render(
+    <App />
+  );
 
 }
